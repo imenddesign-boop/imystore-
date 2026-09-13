@@ -4,1007 +4,885 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Imy Store | Dr. Althea 345 Relief Cream</title>
-
-<meta name="description" content="Imy Store - Dr. Althea 345 Relief Cream 50ml">
+<title>Imy Store | Dr. Althea 345</title>
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, "Tahoma", sans-serif;
-    background:#fafafa;
-    color:#111;
-    line-height:1.7;
+  font-family:Arial,Tahoma,sans-serif;
+  background:#f8f8f8;
+  color:#111;
+  line-height:1.7;
 }
 
-/* ================= HEADER ================= */
-
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #eee;
 }
 
 .nav{
-    max-width:1150px;
-    margin:auto;
-    padding:16px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  max-width:1150px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-    font-size:27px;
-    font-weight:900;
-    background:linear-gradient(135deg,#111,#555);
-    -webkit-background-clip:text;
-    color:transparent;
+  font-size:27px;
+  font-weight:900;
+  background:linear-gradient(90deg,#111,#087c68,#50b99b);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-.nav-btn{
-    background:#111;
-    color:white;
-    padding:10px 18px;
-    border-radius:25px;
-    text-decoration:none;
-    font-size:14px;
+.nav a{
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 20px;
+  border-radius:25px;
 }
-
-/* ================= HERO ================= */
 
 .hero{
-    max-width:1150px;
-    margin:auto;
-    padding:55px 20px 35px;
-    text-align:center;
+  text-align:center;
+  padding:55px 20px 35px;
+  animation:fadeUp .8s ease;
 }
 
 .badge{
-    display:inline-block;
-    background:#e9f7f0;
-    color:#16845a;
-    padding:7px 16px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:18px;
+  display:inline-block;
+  background:#e8f7f1;
+  color:#087c68;
+  padding:7px 16px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:15px;
 }
 
 .hero h1{
-    font-size:clamp(32px,6vw,58px);
-    line-height:1.15;
-    margin-bottom:15px;
+  font-size:clamp(34px,7vw,58px);
+  line-height:1.15;
 }
 
 .hero h1 span{
-    background:linear-gradient(90deg,#111,#147d65,#5bbf9b);
-    -webkit-background-clip:text;
-    color:transparent;
+  background:linear-gradient(90deg,#111,#087c68,#54b997);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 .hero p{
-    color:#666;
-    max-width:650px;
-    margin:auto;
+  max-width:650px;
+  margin:15px auto;
+  color:#666;
 }
 
-/* ================= PRODUCT ================= */
-
 .product{
-    max-width:1150px;
-    margin:30px auto 70px;
-    padding:20px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-    align-items:center;
+  max-width:1150px;
+  margin:20px auto 70px;
+  padding:20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+  animation:fadeUp 1s ease;
 }
 
 .gallery{
-    background:white;
-    border-radius:28px;
-    padding:18px;
-    box-shadow:0 15px 50px rgba(0,0,0,.08);
+  background:#fff;
+  padding:18px;
+  border-radius:28px;
+  box-shadow:0 15px 50px rgba(0,0,0,.08);
 }
 
 .main-image{
-    width:100%;
-    height:450px;
-    object-fit:contain;
-    border-radius:22px;
-    background:#f5f5f5;
-    transition:.5s;
+  width:100%;
+  height:450px;
+  object-fit:contain;
+  background:#f4f4f4;
+  border-radius:20px;
+  transition:.4s;
 }
 
 .main-image:hover{
-    transform:scale(1.02);
+  transform:scale(1.02);
 }
 
 .thumbs{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-top:12px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:12px;
 }
 
 .thumbs img{
-    width:100%;
-    height:85px;
-    object-fit:cover;
-    border-radius:14px;
-    cursor:pointer;
-    border:2px solid transparent;
-    transition:.3s;
+  width:100%;
+  height:85px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer;
+  border:2px solid transparent;
+  transition:.3s;
 }
 
 .thumbs img:hover{
-    transform:translateY(-3px);
-    border-color:#222;
+  transform:translateY(-3px);
+  border-color:#111;
 }
 
-/* ================= PRODUCT INFO ================= */
-
 .product-info h2{
-    font-size:34px;
-    line-height:1.3;
-    margin-bottom:15px;
+  font-size:34px;
+  line-height:1.3;
+  margin-bottom:12px;
 }
 
 .rating{
-    color:#e9a400;
-    margin-bottom:15px;
+  color:#e3a000;
+  margin-bottom:10px;
 }
 
 .description{
-    color:#666;
-    margin-bottom:20px;
+  color:#666;
+  margin-bottom:15px;
 }
 
 .price-box{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin:20px 0;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:20px 0;
+  flex-wrap:wrap;
 }
 
 .old-price{
-    color:#999;
-    text-decoration:line-through;
-    font-size:20px;
+  color:#999;
+  text-decoration:line-through;
+  font-size:20px;
 }
 
 .price{
-    font-size:38px;
-    font-weight:900;
-    color:#111;
+  font-size:38px;
+  font-weight:900;
 }
 
 .discount{
-    background:#111;
-    color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:13px;
+  background:#111;
+  color:#fff;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:13px;
 }
 
 .features{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin:25px 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:22px 0;
 }
 
 .feature{
-    background:#fff;
-    padding:15px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.05);
+  background:#fff;
+  padding:14px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 .feature b{
-    display:block;
-    margin-bottom:3px;
+  display:block;
 }
 
 .feature span{
-    font-size:13px;
-    color:#777;
+  color:#777;
+  font-size:13px;
 }
 
-/* ================= ORDER ================= */
-
 .order-card{
-    background:white;
-    border-radius:25px;
-    padding:25px;
-    margin-top:25px;
-    box-shadow:0 15px 45px rgba(0,0,0,.08);
+  background:#fff;
+  border-radius:25px;
+  padding:25px;
+  margin-top:25px;
+  box-shadow:0 15px 45px rgba(0,0,0,.08);
 }
 
 .order-card h3{
-    font-size:23px;
-    margin-bottom:18px;
+  font-size:23px;
+  margin-bottom:18px;
 }
 
 .input-group{
-    margin-bottom:14px;
+  margin-bottom:14px;
 }
 
 .input-group label{
-    display:block;
-    font-weight:bold;
-    margin-bottom:6px;
-    font-size:14px;
+  display:block;
+  font-weight:bold;
+  margin-bottom:6px;
+  font-size:14px;
 }
 
 .input-group input,
 .input-group select{
-    width:100%;
-    padding:14px 15px;
-    border:1px solid #ddd;
-    border-radius:13px;
-    background:#fafafa;
-    outline:none;
-    font-size:15px;
-    transition:.3s;
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:13px;
+  background:#fafafa;
+  outline:none;
+  font-size:15px;
 }
 
 .input-group input:focus,
 .input-group select:focus{
-    border-color:#111;
-    background:white;
+  border-color:#111;
+  background:#fff;
 }
 
 .row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
 .total{
-    background:#f4f4f4;
-    border-radius:15px;
-    padding:15px;
-    margin:15px 0;
-    display:flex;
-    justify-content:space-between;
-    font-weight:bold;
+  background:#f2f2f2;
+  border-radius:15px;
+  padding:15px;
+  margin:15px 0;
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
 }
 
 .total-price{
-    font-size:21px;
+  font-size:21px;
 }
 
 .order-btn{
-    width:100%;
-    border:none;
-    background:linear-gradient(135deg,#111,#333);
-    color:white;
-    padding:16px;
-    border-radius:15px;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
+  width:100%;
+  border:none;
+  background:linear-gradient(135deg,#111,#087c68);
+  color:#fff;
+  padding:16px;
+  border-radius:15px;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
 }
 
 .order-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 25px rgba(0,0,0,.2);
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(0,0,0,.2);
 }
 
-.whatsapp{
-    margin-top:10px;
-    text-align:center;
-    font-size:12px;
-    color:#777;
+.order-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
 }
 
-/* ================= ADVANTAGES ================= */
+.status{
+  display:none;
+  text-align:center;
+  margin-top:12px;
+  padding:10px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.success{
+  background:#e7f8ef;
+  color:#087c68;
+}
+
+.error{
+  background:#ffeaea;
+  color:#c62828;
+}
 
 .advantages{
-    background:#111;
-    color:white;
-    padding:60px 20px;
+  background:#111;
+  color:#fff;
+  padding:60px 20px;
 }
 
 .advantages-container{
-    max-width:1100px;
-    margin:auto;
-    text-align:center;
+  max-width:1100px;
+  margin:auto;
+  text-align:center;
 }
 
 .advantages h2{
-    font-size:32px;
-    margin-bottom:35px;
+  font-size:32px;
+  margin-bottom:30px;
 }
 
 .adv-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .adv{
-    background:#1c1c1c;
-    padding:28px 20px;
-    border-radius:20px;
-    transition:.3s;
+  background:#1c1c1c;
+  padding:28px 20px;
+  border-radius:20px;
+  transition:.3s;
 }
 
 .adv:hover{
-    transform:translateY(-8px);
-    background:#242424;
+  transform:translateY(-7px);
 }
 
 .icon{
-    font-size:35px;
-    margin-bottom:10px;
+  font-size:35px;
+  margin-bottom:8px;
 }
 
 .adv p{
-    color:#aaa;
-    font-size:14px;
+  color:#aaa;
+  font-size:14px;
 }
 
-/* ================= REVIEWS ================= */
-
 .reviews{
-    max-width:1050px;
-    margin:70px auto;
-    padding:20px;
-    text-align:center;
+  max-width:1050px;
+  margin:65px auto;
+  padding:20px;
+  text-align:center;
 }
 
 .reviews h2{
-    font-size:32px;
-    margin-bottom:30px;
+  font-size:32px;
+  margin-bottom:30px;
 }
 
 .review-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .review{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 8px 30px rgba(0,0,0,.06);
+  background:#fff;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
 }
 
 .review-stars{
-    color:#e8a500;
-    margin-bottom:10px;
+  color:#e3a000;
 }
 
 .review p{
-    color:#666;
-    font-size:14px;
+  color:#666;
+  font-size:14px;
 }
 
 .review b{
-    display:block;
-    margin-top:12px;
+  display:block;
+  margin-top:10px;
 }
-
-/* ================= FOOTER ================= */
 
 footer{
-    background:#f0f0f0;
-    padding:30px 20px;
-    text-align:center;
-    color:#777;
-    font-size:13px;
+  background:#eee;
+  text-align:center;
+  padding:30px;
+  color:#777;
+  font-size:13px;
 }
-
-/* ================= ANIMATIONS ================= */
 
 @keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
-
-.hero,
-.product,
-.reviews{
-    animation:fadeUp .8s ease;
-}
-
-/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
-    .product{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
+  .product{
+    grid-template-columns:1fr;
+  }
 
-    .main-image{
-        height:350px;
-    }
+  .main-image{
+    height:350px;
+  }
 
-    .product-info h2{
-        font-size:28px;
-    }
-
-    .features{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .adv-grid,
-    .review-grid{
-        grid-template-columns:1fr;
-    }
+  .adv-grid,
+  .review-grid{
+    grid-template-columns:1fr;
+  }
 
 }
 
 @media(max-width:500px){
 
-    .nav{
-        padding:12px 15px;
-    }
+  .hero{
+    padding-top:35px;
+  }
 
-    .logo{
-        font-size:23px;
-    }
+  .main-image{
+    height:300px;
+  }
 
-    .hero{
-        padding-top:35px;
-    }
+  .thumbs img{
+    height:65px;
+  }
 
-    .main-image{
-        height:300px;
-    }
+  .product-info h2{
+    font-size:28px;
+  }
 
-    .thumbs img{
-        height:65px;
-    }
+  .price{
+    font-size:31px;
+  }
 
-    .price{
-        font-size:31px;
-    }
-
-    .row{
-        grid-template-columns:1fr;
-    }
-
+  .row{
+    grid-template-columns:1fr;
+  }
 }
-
 </style>
 </head>
 
-
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
-
-<div class="nav">
-
-<div class="logo">
-Imy Store
-</div>
-
-<a href="#order" class="nav-btn">
-اطلبي الآن
-</a>
-
-</div>
-
+  <div class="nav">
+    <div class="logo">Imy Store</div>
+    <a href="#order">اطلبي الآن</a>
+  </div>
 </header>
-
-
-<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<div class="badge">
-✨ منتج مميز
-</div>
+  <div class="badge">✨ منتج مميز</div>
 
-<h1>
-Dr. Althea
-<br>
-<span>345 Relief Cream</span>
-</h1>
+  <h1>
+    Dr. Althea
+    <br>
+    <span>345 Relief Cream</span>
+  </h1>
 
-<p>
-كريم 345 للترطيب والعناية بالبشرة.
-اطلبي الآن مع الدفع عند الاستلام.
-</p>
+  <p>
+    كريم 345 للعناية بالبشرة بتركيبة مريحة ومناسبة للاستخدام اليومي.
+  </p>
 
 </section>
-
-
-<!-- ================= PRODUCT ================= -->
 
 <section class="product">
 
+  <div class="gallery">
 
-<!-- GALLERY -->
+    <img
+      id="mainImage"
+      class="main-image"
+      src="product4.jpg"
+      alt="Dr Althea 345 Relief Cream"
+    >
 
-<div class="gallery">
+    <div class="thumbs">
 
-<img
-src="product4.jpg"
-id="mainImage"
-class="main-image"
-alt="Dr Althea 345 Relief Cream"
->
+      <img src="product1.jpg"
+           onclick="changeImage('product1.jpg')">
 
-<div class="thumbs">
+      <img src="product2.jpg"
+           onclick="changeImage('product2.jpg')">
 
-<img
-src="product1.jpg"
-onclick="changeImage('product1.jpg')"
-alt="Product image 1"
->
+      <img src="product3.jpg"
+           onclick="changeImage('product3.jpg')">
 
-<img
-src="product2.jpg"
-onclick="changeImage('product2.jpg')"
-alt="Product image 2"
->
+      <img src="product4.jpg"
+           onclick="changeImage('product4.jpg')">
 
-<img
-src="product3.jpg"
-onclick="changeImage('product3.jpg')"
-alt="Product image 3"
->
+    </div>
 
-<img
-src="product4.jpg"
-onclick="changeImage('product4.jpg')"
-alt="Product image 4"
->
+  </div>
 
-</div>
 
-</div>
+  <div class="product-info">
 
+    <div class="rating">
+      ★★★★★
+    </div>
 
-<!-- PRODUCT INFO -->
+    <h2>
+      Dr. Althea 345 Relief Cream 50ml
+    </h2>
 
-<div class="product-info">
+    <p class="description">
+      كريم عناية بالبشرة بتركيبة مريحة ومناسبة للاستخدام اليومي.
+    </p>
 
-<div class="rating">
-★★★★★ <span style="color:#777">منتج مطلوب</span>
-</div>
+    <div class="price-box">
 
-<h2>
-Dr. Althea 345 Relief Cream 50ml
-</h2>
+      <span class="old-price">
+        5,000 DA
+      </span>
 
-<p class="description">
-كريم عناية بالبشرة بتركيبة مريحة ومناسبة للاستخدام اليومي.
-</p>
+      <span class="price">
+        4,490 DA
+      </span>
 
+      <span class="discount">
+        -10%
+      </span>
 
-<div class="price-box">
+    </div>
 
-<span class="old-price">
-5,000 DA
-</span>
 
-<span class="price">
-4,490 DA
-</span>
+    <div class="features">
 
-<span class="discount">
--10%
-</span>
+      <div class="feature">
+        🧴
+        <b>50ml</b>
+        <span>الحجم</span>
+      </div>
 
-</div>
+      <div class="feature">
+        🚚
+        <b>الدفع عند الاستلام</b>
+        <span>COD</span>
+      </div>
 
+      <div class="feature">
+        🇩🇿
+        <b>كل الولايات</b>
+        <span>التوصيل في الجزائر</span>
+      </div>
 
-<div class="features">
+      <div class="feature">
+        ✨
+        <b>Dr. Althea</b>
+        <span>345 Relief Cream</span>
+      </div>
 
-<div class="feature">
-🧴
-<b>50ml</b>
-<span>الحجم</span>
-</div>
+    </div>
 
-<div class="feature">
-🚚
-<b>الدفع عند الاستلام</b>
-<span>COD</span>
-</div>
 
-<div class="feature">
-🇩🇿
-<b>التوصيل في الجزائر</b>
-<span>كل الولايات</span>
-</div>
+    <div class="order-card" id="order">
 
-<div class="feature">
-✨
-<b>منتج أصلي</b>
-<span>Dr. Althea</span>
-</div>
+      <h3>
+        🛍️ أكملي طلبك
+      </h3>
 
-</div>
+      <form id="orderForm">
 
+        <div class="input-group">
+          <label>الاسم واللقب</label>
 
-<!-- ================= ORDER FORM ================= -->
+          <input
+            type="text"
+            id="name"
+            placeholder="اكتبي الاسم واللقب"
+            required
+          >
+        </div>
 
-<div class="order-card" id="order">
 
-<h3>
-🛍️ أكملي طلبك
-</h3>
+        <div class="input-group">
+          <label>رقم الهاتف</label>
 
-<form id="orderForm">
+          <input
+            type="tel"
+            id="phone"
+            placeholder="مثال: 0550123456"
+            required
+          >
+        </div>
 
 
-<div class="input-group">
+        <div class="input-group">
+          <label>الولاية</label>
 
-<label>
-الاسم واللقب
-</label>
+          <select id="wilaya" required>
+            <option value="">
+              جاري تحميل الولايات...
+            </option>
+          </select>
 
-<input
-type="text"
-id="name"
-placeholder="اكتبي الاسم واللقب"
-required
->
+        </div>
 
-</div>
 
+        <div class="input-group">
+          <label>البلدية</label>
 
-<div class="input-group">
+          <select id="commune" required disabled>
+            <option value="">
+              اختاري الولاية أولاً
+            </option>
+          </select>
 
-<label>
-رقم الهاتف
-</label>
+        </div>
 
-<input
-type="tel"
-id="phone"
-placeholder="مثال: 0550123456"
-required
->
 
-</div>
+        <div class="input-group">
+          <label>الكمية</label>
 
+          <select id="quantity">
 
-<div class="input-group">
+            <option value="1">
+              1 قطعة
+            </option>
 
-<label>
-الولاية
-</label>
+            <option value="2">
+              2 قطع
+            </option>
 
-<select id="wilaya" required>
+            <option value="3">
+              3 قطع
+            </option>
 
-<option value="">
-جاري تحميل الولايات...
-</option>
+            <option value="4">
+              4 قطع
+            </option>
 
-</select>
+            <option value="5">
+              5 قطع
+            </option>
 
-</div>
+          </select>
+        </div>
 
 
-<div class="input-group">
+        <div class="total">
 
-<label>
-البلدية
-</label>
+          <span>
+            المجموع
+          </span>
 
-<select id="commune" required disabled>
+          <span
+            class="total-price"
+            id="totalPrice"
+          >
+            4,490 DA
+          </span>
 
-<option value="">
-اختاري الولاية أولاً
-</option>
+        </div>
 
-</select>
 
-</div>
+        <button
+          type="submit"
+          class="order-btn"
+          id="orderButton"
+        >
+          🛍️ تأكيد الطلب
+        </button>
 
 
-<div class="input-group">
+        <div
+          id="status"
+          class="status"
+        ></div>
 
-<label>
-الكمية
-</label>
+      </form>
 
-<select id="quantity">
+    </div>
 
-<option value="1">
-1 قطعة
-</option>
-
-<option value="2">
-2 قطع
-</option>
-
-<option value="3">
-3 قطع
-</option>
-
-<option value="4">
-4 قطع
-</option>
-
-<option value="5">
-5 قطع
-</option>
-
-</select>
-
-</div>
-
-
-<div class="total">
-
-<span>
-المجموع
-</span>
-
-<span class="total-price" id="totalPrice">
-4,490 DA
-</span>
-
-</div>
-
-
-<button
-type="submit"
-class="order-btn"
->
-📱 تأكيد الطلب عبر WhatsApp
-</button>
-
-
-<div class="whatsapp">
-سيتم فتح WhatsApp وإرسال تفاصيل طلبك
-</div>
-
-</form>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- ================= ADVANTAGES ================= -->
 
 <section class="advantages">
 
-<div class="advantages-container">
+  <div class="advantages-container">
 
-<h2>
-لماذا Imy Store؟
-</h2>
+    <h2>
+      لماذا Imy Store؟
+    </h2>
 
-<div class="adv-grid">
+    <div class="adv-grid">
 
-<div class="adv">
+      <div class="adv">
+        <div class="icon">🚚</div>
+        <h3>توصيل للولايات</h3>
+        <p>
+          نستقبل الطلبات من مختلف ولايات الجزائر.
+        </p>
+      </div>
 
-<div class="icon">
-🚚
-</div>
+      <div class="adv">
+        <div class="icon">💵</div>
+        <h3>الدفع عند الاستلام</h3>
+        <p>
+          الدفع عند وصول الطلب.
+        </p>
+      </div>
 
-<h3>
-توصيل للولايات
-</h3>
+      <div class="adv">
+        <div class="icon">📱</div>
+        <h3>طلب سهل</h3>
+        <p>
+          املئي المعلومات وأرسلي طلبك مباشرة.
+        </p>
+      </div>
 
-<p>
-نستقبل الطلبات من مختلف ولايات الجزائر.
-</p>
+    </div>
 
-</div>
-
-
-<div class="adv">
-
-<div class="icon">
-💵
-</div>
-
-<h3>
-الدفع عند الاستلام
-</h3>
-
-<p>
-ادفعي عند استلام طلبك.
-</p>
-
-</div>
-
-
-<div class="adv">
-
-<div class="icon">
-📱
-</div>
-
-<h3>
-طلب سهل
-</h3>
-
-<p>
-أرسلي طلبك مباشرة عبر WhatsApp.
-</p>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-
-<!-- ================= REVIEWS ================= -->
 
 <section class="reviews">
 
-<h2>
-آراء الزبائن
-</h2>
+  <h2>
+    آراء الزبائن
+  </h2>
 
-<div class="review-grid">
+  <div class="review-grid">
 
-<div class="review">
+    <div class="review">
 
-<div class="review-stars">
-★★★★★
-</div>
+      <div class="review-stars">
+        ★★★★★
+      </div>
 
-<p>
-"الطلب وصلني في الوقت والمنتج كان رائع."
-</p>
+      <p>
+        منتج رائع والتوصيل كان سريعًا.
+      </p>
 
-<b>
-زبونة Imy Store
-</b>
+      <b>
+        زبونة Imy Store
+      </b>
 
-</div>
-
-
-<div class="review">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<p>
-"طريقة الطلب سهلة والتوصيل كان جيد."
-</p>
-
-<b>
-زبونة Imy Store
-</b>
-
-</div>
+    </div>
 
 
-<div class="review">
+    <div class="review">
 
-<div class="review-stars">
-★★★★★
-</div>
+      <div class="review-stars">
+        ★★★★★
+      </div>
 
-<p>
-"المنتج والتغليف ممتازين."
-</p>
+      <p>
+        طريقة الطلب سهلة جدًا.
+      </p>
 
-<b>
-زبونة Imy Store
-</b>
+      <b>
+        زبونة Imy Store
+      </b>
 
-</div>
+    </div>
 
-</div>
+
+    <div class="review">
+
+      <div class="review-stars">
+        ★★★★★
+      </div>
+
+      <p>
+        التغليف والمنتج ممتازان.
+      </p>
+
+      <b>
+        زبونة Imy Store
+      </b>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
-© 2026 Imy Store
-<br>
-جميع الحقوق محفوظة
+  © 2026 Imy Store
+  <br>
+  جميع الحقوق محفوظة
 
 </footer>
-
 
 
 <script>
 
 /* =========================================
-   PRODUCT IMAGE
+   إعدادات المتجر
+========================================= */
+
+const PRODUCT_PRICE = 4490;
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbwv8O5EHoMD4Vnfh_2fA_VlRmH8SKWhMGnAWRtth_xkwqzJjl2wdWXflQJH5eQmp2Pl/exec";
+
+
+/* =========================================
+   الصور
 ========================================= */
 
 function changeImage(image){
 
-    const mainImage = document.getElementById("mainImage");
+  const mainImage =
+    document.getElementById("mainImage");
 
-    mainImage.style.opacity = "0";
+  mainImage.style.opacity = "0";
 
-    setTimeout(function(){
+  setTimeout(function(){
 
-        mainImage.src = image;
+    mainImage.src = image;
 
-        mainImage.style.opacity = "1";
+    mainImage.style.opacity = "1";
 
-    },150);
+  },150);
 
 }
 
 
 /* =========================================
-   PRICE
+   السعر
 ========================================= */
 
-const PRODUCT_PRICE = 4490;
+const quantitySelect =
+  document.getElementById("quantity");
 
-const quantitySelect = document.getElementById("quantity");
-
-const totalPrice = document.getElementById("totalPrice");
+const totalPrice =
+  document.getElementById("totalPrice");
 
 
 function updateTotal(){
 
-    const quantity = Number(quantitySelect.value);
+  const quantity =
+    Number(quantitySelect.value);
 
-    const total = PRODUCT_PRICE * quantity;
+  const total =
+    PRODUCT_PRICE * quantity;
 
-    totalPrice.textContent =
-        total.toLocaleString("fr-DZ") + " DA";
+  totalPrice.textContent =
+    total.toLocaleString("fr-DZ") + " DA";
 
 }
 
 
 quantitySelect.addEventListener(
-    "change",
-    updateTotal
+  "change",
+  updateTotal
 );
 
 updateTotal();
 
 
 /* =========================================
-   ALGERIA WILAYAS & COMMUNES
+   الولايات والبلديات
 ========================================= */
-
-/*
-   قاعدة البيانات:
-   69 ولاية
-   1541 بلدية
-
-   المصدر:
-   el-amin-dev/algeria-wilayas-communes
-*/
 
 const WILAYAS_URL =
 "https://cdn.jsdelivr.net/gh/el-amin-dev/algeria-wilayas-communes@main/data/wilayas.json";
@@ -1012,306 +890,422 @@ const WILAYAS_URL =
 const COMMUNES_URL =
 "https://cdn.jsdelivr.net/gh/el-amin-dev/algeria-wilayas-communes@main/data/communes.json";
 
-
 const wilayaSelect =
-document.getElementById("wilaya");
+  document.getElementById("wilaya");
 
 const communeSelect =
-document.getElementById("commune");
+  document.getElementById("commune");
 
-
+let allWilayas = [];
 let allCommunes = [];
 
 
-/* =========================================
-   LOAD WILAYAS
-========================================= */
+/* تحميل الولايات */
 
 async function loadWilayas(){
 
-    try{
+  try{
 
-        const response =
-        await fetch(WILAYAS_URL);
+    const response =
+      await fetch(WILAYAS_URL);
 
-        if(!response.ok){
-
-            throw new Error("Wilayas loading error");
-
-        }
-
-        const data =
-        await response.json();
-
-        const wilayas =
-        data.wilayas || [];
-
-
-        wilayaSelect.innerHTML =
-        '<option value="">اختاري الولاية</option>';
-
-
-        wilayas.forEach(function(wilaya){
-
-            const option =
-            document.createElement("option");
-
-            option.value =
-            wilaya.code;
-
-            option.textContent =
-            wilaya.wilaya_num +
-            " - " +
-            wilaya.nom_ar +
-            " | " +
-            wilaya.nom_fr;
-
-            wilayaSelect.appendChild(option);
-
-        });
-
-
-        await loadCommunes();
-
-
-    }catch(error){
-
-        console.error(error);
-
-        wilayaSelect.innerHTML =
-        '<option value="">تعذر تحميل الولايات</option>';
-
+    if(!response.ok){
+      throw new Error("Wilayas error");
     }
+
+    const data =
+      await response.json();
+
+    allWilayas =
+      Array.isArray(data)
+      ? data
+      : (data.wilayas || []);
+
+    wilayaSelect.innerHTML =
+      '<option value="">اختاري الولاية</option>';
+
+
+    allWilayas.forEach(function(wilaya){
+
+      const option =
+        document.createElement("option");
+
+      const code =
+        String(
+          wilaya.code ||
+          wilaya.wilaya_code ||
+          wilaya.wilaya_num ||
+          ""
+        );
+
+      option.value = code;
+
+      option.textContent =
+        (
+          wilaya.wilaya_num ||
+          wilaya.code ||
+          ""
+        ) +
+        " - " +
+        (
+          wilaya.nom_ar ||
+          wilaya.name_ar ||
+          ""
+        ) +
+        " | " +
+        (
+          wilaya.nom_fr ||
+          wilaya.name_fr ||
+          ""
+        );
+
+      wilayaSelect.appendChild(option);
+
+    });
+
+  }catch(error){
+
+    console.error(error);
+
+    wilayaSelect.innerHTML =
+      '<option value="">تعذر تحميل الولايات</option>';
+
+  }
 
 }
 
 
-/* =========================================
-   LOAD COMMUNES
-========================================= */
+/* تحميل البلديات */
 
 async function loadCommunes(){
 
-    try{
+  try{
 
-        const response =
-        await fetch(COMMUNES_URL);
+    const response =
+      await fetch(COMMUNES_URL);
 
-        if(!response.ok){
-
-            throw new Error("Communes loading error");
-
-        }
-
-        const data =
-        await response.json();
-
-        allCommunes =
-        data.communes || [];
-
-
-    }catch(error){
-
-        console.error(error);
-
+    if(!response.ok){
+      throw new Error("Communes error");
     }
+
+    const data =
+      await response.json();
+
+    allCommunes =
+      Array.isArray(data)
+      ? data
+      : (data.communes || []);
+
+  }catch(error){
+
+    console.error(error);
+
+  }
 
 }
 
 
-/* =========================================
-   WHEN WILAYA CHANGES
-========================================= */
+/* عند اختيار الولاية */
 
 wilayaSelect.addEventListener(
-    "change",
-    function(){
+  "change",
+  function(){
 
-        const selectedCode =
-        this.value;
+    const selectedCode =
+      String(this.value);
 
+    communeSelect.innerHTML =
+      '<option value="">اختاري البلدية</option>';
 
-        communeSelect.innerHTML =
-        '<option value="">اختاري البلدية</option>';
+    communeSelect.disabled = true;
 
-
-        if(!selectedCode){
-
-            communeSelect.disabled = true;
-
-            return;
-
-        }
-
-
-        const communes =
-        allCommunes.filter(function(commune){
-
-            return commune.wilaya_code === selectedCode;
-
-        });
-
-
-        communes.forEach(function(commune){
-
-            const option =
-            document.createElement("option");
-
-
-            option.value =
-            commune.nom_ar;
-
-
-            option.textContent =
-            commune.nom_ar +
-            " | " +
-            commune.nom_fr;
-
-
-            communeSelect.appendChild(option);
-
-        });
-
-
-        communeSelect.disabled =
-        communes.length === 0;
-
-
+    if(!selectedCode){
+      return;
     }
-);
 
 
-/* =========================================
-   START LOADING
-========================================= */
+    const communes =
+      allCommunes.filter(function(commune){
 
-loadWilayas();
+        const communeCode =
+          String(
+            commune.wilaya_code ||
+            commune.wilaya ||
+            commune.wilaya_num ||
+            ""
+          );
 
+        return communeCode === selectedCode;
 
-/* =========================================
-   WHATSAPP ORDER
-========================================= */
-
-
-
-const WHATSAPP_NUMBER =
-"213553644837";
-
-
-document
-.getElementById("orderForm")
-.addEventListener(
-    "submit",
-    function(event){
-
-        event.preventDefault();
+      });
 
 
-        const name =
-        document.getElementById("name").value.trim();
+    communes.forEach(function(commune){
 
+      const option =
+        document.createElement("option");
 
-        const phone =
-        document.getElementById("phone").value.trim();
+      option.value =
+        commune.nom_ar ||
+        commune.name_ar ||
+        commune.nom_fr ||
+        commune.name_fr ||
+        "";
 
-
-        const wilaya =
-        wilayaSelect.options[
-            wilayaSelect.selectedIndex
-        ].text;
-
-
-        const commune =
-        communeSelect.value;
-
-
-        const quantity =
-        Number(quantitySelect.value);
-
-
-        if(!name){
-
-            alert("من فضلك أدخلي الاسم واللقب.");
-
-            return;
-
-        }
-
-
-        if(!phone){
-
-            alert("من فضلك أدخلي رقم الهاتف.");
-
-            return;
-
-        }
-
-
-        if(!wilayaSelect.value){
-
-            alert("من فضلك اختاري الولاية.");
-
-            return;
-
-        }
-
-
-        if(!commune){
-
-            alert("من فضلك اختاري البلدية.");
-
-            return;
-
-        }
-
-
-        const total =
-        PRODUCT_PRICE * quantity;
-
-
-        const message =
-
-`🛍️ *طلب جديد من Imy Store*
-
-👤 الاسم واللقب:
-${name}
-
-📞 رقم الهاتف:
-${phone}
-
-📍 الولاية:
-${wilaya}
-
-🏘️ البلدية:
-${commune}
-
-🧴 المنتج:
-Dr. Althea 345 Relief Cream 50ml
-
-📦 الكمية:
-${quantity}
-
-💰 المجموع:
-${total.toLocaleString("fr-DZ")} DA
-
-💵 طريقة الدفع:
-الدفع عند الاستلام`;
-
-
-        const whatsappURL =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-        window.open(
-            whatsappURL,
-            "_blank"
+      option.textContent =
+        (
+          commune.nom_ar ||
+          commune.name_ar ||
+          ""
+        ) +
+        " | " +
+        (
+          commune.nom_fr ||
+          commune.name_fr ||
+          ""
         );
 
+      communeSelect.appendChild(option);
+
+    });
+
+
+    if(communes.length > 0){
+      communeSelect.disabled = false;
     }
+
+  }
 );
+
+
+/* تشغيل تحميل البيانات */
+
+async function initializeLocation(){
+
+  await Promise.all([
+    loadWilayas(),
+    loadCommunes()
+  ]);
+
+}
+
+initializeLocation();
+
+
+/* =========================================
+   إرسال الطلب إلى Google Sheets
+========================================= */
+
+const orderForm =
+  document.getElementById("orderForm");
+
+const orderButton =
+  document.getElementById("orderButton");
+
+const statusBox =
+  document.getElementById("status");
+
+
+orderForm.addEventListener(
+  "submit",
+  async function(event){
+
+    event.preventDefault();
+
+
+    const name =
+      document.getElementById("name")
+      .value
+      .trim();
+
+
+    const phone =
+      document.getElementById("phone")
+      .value
+      .trim();
+
+
+    const wilayaOption =
+      wilayaSelect.options[
+        wilayaSelect.selectedIndex
+      ];
+
+
+    const wilaya =
+      wilayaOption
+      ? wilayaOption.textContent
+      : "";
+
+
+    const commune =
+      communeSelect.value;
+
+
+    const quantity =
+      Number(quantitySelect.value);
+
+
+    const total =
+      PRODUCT_PRICE * quantity;
+
+
+    if(!name){
+
+      showStatus(
+        "يرجى إدخال الاسم واللقب.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    if(!phone){
+
+      showStatus(
+        "يرجى إدخال رقم الهاتف.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    if(!wilayaSelect.value){
+
+      showStatus(
+        "يرجى اختيار الولاية.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    if(!commune){
+
+      showStatus(
+        "يرجى اختيار البلدية.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    orderButton.disabled = true;
+
+    orderButton.textContent =
+      "⏳ جارٍ إرسال الطلب...";
+
+
+    const orderData = {
+
+      name: name,
+
+      phone: phone,
+
+      wilaya: wilaya,
+
+      commune: commune,
+
+      product:
+        "Dr. Althea 345 Relief Cream 50ml",
+
+      quantity: quantity,
+
+      total: total
+
+    };
+
+
+    try{
+
+      await fetch(
+        GOOGLE_SCRIPT_URL,
+        {
+          method:"POST",
+
+          mode:"no-cors",
+
+          headers:{
+            "Content-Type":
+              "text/plain;charset=utf-8"
+          },
+
+          body:
+            JSON.stringify(orderData)
+        }
+      );
+
+
+      showStatus(
+        "✅ تم تسجيل طلبك بنجاح! سنتواصل معك قريبًا.",
+        true
+      );
+
+
+      orderForm.reset();
+
+      communeSelect.innerHTML =
+        '<option value="">اختاري الولاية أولاً</option>';
+
+      communeSelect.disabled = true;
+
+      updateTotal();
+
+
+    }catch(error){
+
+      console.error(error);
+
+      showStatus(
+        "❌ حدث خطأ. يرجى المحاولة مرة أخرى.",
+        false
+      );
+
+    }
+
+
+    orderButton.disabled = false;
+
+    orderButton.textContent =
+      "🛍️ تأكيد الطلب";
+
+  }
+);
+
+
+/* =========================================
+   رسالة الحالة
+========================================= */
+
+function showStatus(message, success){
+
+  statusBox.textContent =
+    message;
+
+  statusBox.className =
+    success
+    ? "status success"
+    : "status error";
+
+  statusBox.style.display =
+    "block";
+
+
+  setTimeout(function(){
+
+    statusBox.style.display =
+      "none";
+
+  },5000);
+
+}
 
 </script>
 
