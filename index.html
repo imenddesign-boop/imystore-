@@ -821,9 +821,7 @@ footer{
 
 const PRODUCT_PRICE = 4490;
 
-const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbztYrKB8tYpgMbBxnmnpl56cpgx1-VV0Eac7VcuxihUrw1fCBAgU9o462UAnrLIsprA/exec";
-
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCXETTfabBbXB6msZkxmx1gzVuqpFdguPil5cekWr94-I5ra1Cvq-RTS-mBB7EDPSb/exec";
 
 /* =========================================
    الصور
@@ -1225,22 +1223,22 @@ orderForm.addEventListener(
 
     try{
 
-      await fetch(
-        GOOGLE_SCRIPT_URL,
-        {
-          method:"POST",
-
-          mode:"no-cors",
-
-          headers:{
-            "Content-Type":
-              "text/plain;charset=utf-8"
-          },
-
-          body:
-            JSON.stringify(orderData)
-        }
-      );
+      await fetch(GOOGLE_SCRIPT_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify({
+    name: name,
+    phone: phone,
+    wilaya: wilaya,
+    commune: commune,
+    product: "Dr. Althea 345 Relief Cream",
+    quantity: quantity,
+    total: total
+  }),
+  mode: "no-cors"
+});
 
 
       showStatus(
