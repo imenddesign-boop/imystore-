@@ -1222,23 +1222,13 @@ footer{
 
     <div class="reviews-heading">
 
-      <div>
-        <span class="reviews-badge">💬 آراء العملاء</span>
+      <span class="reviews-badge">💬 آراء وتجارب</span>
 
-        <h2>تقييمات وتعليقات الزوار</h2>
+      <h2>ماذا يقول زوارنا؟</h2>
 
-        <p>
-          شاركينا رأيك وتجربتك مع منتجات Imy Store.
-        </p>
-      </div>
-
-      <button
-        type="button"
-        class="write-review-btn"
-        id="openReview"
-      >
-        ✍️ أضيفي تعليقًا
-      </button>
+      <p>
+        اكتشفي آراء وتجارب الزوار حول منتجات Imy Store.
+      </p>
 
     </div>
 
@@ -1248,7 +1238,7 @@ footer{
     <div class="review-product-selector">
 
       <label for="reviewProduct">
-        المنتج
+        اختاري المنتج
       </label>
 
       <select id="reviewProduct">
@@ -1262,17 +1252,22 @@ footer{
     </div>
 
 
+    <!-- زر إضافة تعليق -->
+
+    <button
+      type="button"
+      class="write-review-btn"
+      id="openReview"
+    >
+      ✍️ أضيفي تقييمك
+    </button>
+
+
     <!-- التعليقات -->
 
     <div id="reviewsList" class="reviews-list">
 
-      <div class="empty-reviews">
-        ⭐
-        <br><br>
-        لا توجد تعليقات بعد.
-        <br>
-        كوني أول من يشارك رأيه!
-      </div>
+      <!-- سيتم عرض التعليقات هنا -->
 
     </div>
 
@@ -1286,7 +1281,7 @@ footer{
 
       <div class="review-form-header">
 
-        <h3>✍️ أضيفي تقييمك</h3>
+        <h3>✍️ شاركي تجربتك</h3>
 
         <button
           type="button"
@@ -1321,7 +1316,10 @@ footer{
           التقييم
         </label>
 
-        <div class="stars-input" id="starsInput">
+        <div
+          class="stars-input"
+          id="starsInput"
+        >
 
           <button type="button" data-rating="1">★</button>
           <button type="button" data-rating="2">★</button>
@@ -1364,6 +1362,7 @@ footer{
         ⭐ نشر التقييم
       </button>
 
+
       <div
         id="reviewStatus"
         class="review-status"
@@ -1374,7 +1373,6 @@ footer{
   </div>
 
 </section>
-
 
 <!-- ==============================
      CART
