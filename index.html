@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Imy Store | Dr. Althea 345</title>
+<title>Imy Store | متجر إلكتروني</title>
+
+<meta name="description" content="Imy Store - منتجات العناية بالبشرة والتجميل والمنتجات الصحية في الجزائر.">
+
+<meta property="og:title" content="Imy Store | متجر إلكتروني">
+<meta property="og:description" content="اكتشفي منتجاتنا واطلبي بسهولة من Imy Store.">
+<meta property="og:image" content="product4.jpg">
+<meta property="og:type" content="website">
 
 <style>
 *{
@@ -19,11 +26,12 @@ html{
 
 body{
   font-family:Arial,Tahoma,sans-serif;
-  background:#f8f8f8;
+  background:#f7f8f8;
   color:#111;
   line-height:1.7;
 }
 
+/* HEADER */
 header{
   position:sticky;
   top:0;
@@ -34,48 +42,69 @@ header{
 }
 
 .nav{
-  max-width:1150px;
+  max-width:1200px;
   margin:auto;
-  padding:15px 20px;
+  padding:14px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:15px;
 }
 
 .logo{
-  font-size:27px;
+  font-size:28px;
   font-weight:900;
   background:linear-gradient(90deg,#111,#087c68,#50b99b);
   -webkit-background-clip:text;
   color:transparent;
 }
 
-.nav a{
+.cart-button{
+  border:none;
   background:#111;
   color:#fff;
-  text-decoration:none;
-  padding:10px 20px;
+  padding:11px 18px;
   border-radius:25px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:bold;
 }
 
+.cart-count{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-width:23px;
+  height:23px;
+  margin-right:5px;
+  background:#50b99b;
+  color:#111;
+  border-radius:50%;
+  font-size:12px;
+}
+
+/* HERO */
 .hero{
   text-align:center;
-  padding:55px 20px 35px;
-  animation:fadeUp .8s ease;
+  padding:65px 20px 45px;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(80,185,155,.12),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(8,124,104,.10),transparent 30%);
+  animation:fadeUp .7s ease;
 }
 
 .badge{
   display:inline-block;
   background:#e8f7f1;
   color:#087c68;
-  padding:7px 16px;
+  padding:7px 17px;
   border-radius:30px;
   font-weight:bold;
   margin-bottom:15px;
 }
 
 .hero h1{
-  font-size:clamp(34px,7vw,58px);
+  font-size:clamp(38px,7vw,65px);
   line-height:1.15;
 }
 
@@ -87,232 +116,192 @@ header{
 
 .hero p{
   max-width:650px;
-  margin:15px auto;
+  margin:16px auto;
   color:#666;
 }
 
-.product{
-  max-width:1150px;
-  margin:20px auto 70px;
+/* CATEGORIES */
+.categories{
+  max-width:1200px;
+  margin:10px auto 35px;
   padding:20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+.category-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
-  align-items:center;
-  animation:fadeUp 1s ease;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
 }
 
-.gallery{
+.category{
+  border:none;
   background:#fff;
-  padding:18px;
-  border-radius:28px;
-  box-shadow:0 15px 50px rgba(0,0,0,.08);
+  border-radius:22px;
+  padding:22px 10px;
+  cursor:pointer;
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+  transition:.3s;
+  font-size:15px;
+  font-weight:bold;
 }
 
-.main-image{
+.category:hover,
+.category.active{
+  transform:translateY(-5px);
+  background:#111;
+  color:#fff;
+}
+
+.category-icon{
+  display:block;
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+/* PRODUCTS */
+.products-section{
+  max-width:1200px;
+  margin:20px auto 80px;
+  padding:20px;
+}
+
+.category-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:22px;
+  gap:15px;
+}
+
+.category-heading h2{
+  font-size:29px;
+}
+
+.category-heading span{
+  color:#777;
+  font-size:14px;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.product-card{
+  background:#fff;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 35px rgba(0,0,0,.07);
+  transition:.35s;
+  animation:fadeUp .5s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+
+.product-image-box{
+  height:290px;
+  background:linear-gradient(135deg,#f0f3f2,#e7eeee);
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.product-image-box img{
   width:100%;
-  height:450px;
+  height:100%;
   object-fit:contain;
-  background:#f4f4f4;
-  border-radius:20px;
   transition:.4s;
 }
 
-.main-image:hover{
-  transform:scale(1.02);
+.product-card:hover .product-image-box img{
+  transform:scale(1.04);
 }
 
-.thumbs{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin-top:12px;
+.demo-image{
+  font-size:80px;
 }
 
-.thumbs img{
-  width:100%;
-  height:85px;
-  object-fit:cover;
-  border-radius:14px;
-  cursor:pointer;
-  border:2px solid transparent;
-  transition:.3s;
+.sale{
+  position:absolute;
+  top:14px;
+  right:14px;
+  background:#111;
+  color:#fff;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
 }
 
-.thumbs img:hover{
-  transform:translateY(-3px);
-  border-color:#111;
+.product-content{
+  padding:20px;
 }
 
-.product-info h2{
-  font-size:34px;
-  line-height:1.3;
-  margin-bottom:12px;
-}
-
-.rating{
+.product-rating{
   color:#e3a000;
-  margin-bottom:10px;
+  font-size:14px;
 }
 
-.description{
-  color:#666;
-  margin-bottom:15px;
+.product-name{
+  font-size:20px;
+  margin:5px 0;
 }
 
-.price-box{
+.product-description{
+  color:#777;
+  font-size:13px;
+  min-height:45px;
+}
+
+.price-row{
   display:flex;
   align-items:center;
-  gap:14px;
-  margin:20px 0;
+  gap:10px;
+  margin:14px 0;
   flex-wrap:wrap;
+}
+
+.current-price{
+  font-size:24px;
+  font-weight:900;
 }
 
 .old-price{
   color:#999;
   text-decoration:line-through;
-  font-size:20px;
-}
-
-.price{
-  font-size:38px;
-  font-weight:900;
-}
-
-.discount{
-  background:#111;
-  color:#fff;
-  padding:5px 12px;
-  border-radius:20px;
-  font-size:13px;
-}
-
-.features{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:22px 0;
-}
-
-.feature{
-  background:#fff;
-  padding:14px;
-  border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.05);
-}
-
-.feature b{
-  display:block;
-}
-
-.feature span{
-  color:#777;
-  font-size:13px;
-}
-
-.order-card{
-  background:#fff;
-  border-radius:25px;
-  padding:25px;
-  margin-top:25px;
-  box-shadow:0 15px 45px rgba(0,0,0,.08);
-}
-
-.order-card h3{
-  font-size:23px;
-  margin-bottom:18px;
-}
-
-.input-group{
-  margin-bottom:14px;
-}
-
-.input-group label{
-  display:block;
-  font-weight:bold;
-  margin-bottom:6px;
   font-size:14px;
 }
 
-.input-group input,
-.input-group select{
-  width:100%;
-  padding:14px;
-  border:1px solid #ddd;
-  border-radius:13px;
-  background:#fafafa;
-  outline:none;
-  font-size:15px;
-}
-
-.input-group input:focus,
-.input-group select:focus{
-  border-color:#111;
-  background:#fff;
-}
-
-.row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.total{
-  background:#f2f2f2;
-  border-radius:15px;
-  padding:15px;
-  margin:15px 0;
-  display:flex;
-  justify-content:space-between;
-  font-weight:bold;
-}
-
-.total-price{
-  font-size:21px;
-}
-
-.order-btn{
+.add-cart{
   width:100%;
   border:none;
   background:linear-gradient(135deg,#111,#087c68);
   color:#fff;
-  padding:16px;
-  border-radius:15px;
-  font-size:17px;
-  font-weight:bold;
+  padding:14px;
+  border-radius:14px;
   cursor:pointer;
+  font-size:15px;
+  font-weight:bold;
   transition:.3s;
 }
 
-.order-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 25px rgba(0,0,0,.2);
+.add-cart:hover{
+  transform:translateY(-2px);
 }
 
-.order-btn:disabled{
-  opacity:.6;
-  cursor:not-allowed;
-}
-
-.status{
-  display:none;
-  text-align:center;
-  margin-top:12px;
-  padding:10px;
-  border-radius:10px;
-  font-weight:bold;
-}
-
-.success{
-  background:#e7f8ef;
-  color:#087c68;
-}
-
-.error{
-  background:#ffeaea;
-  color:#c62828;
-}
-
+/* ADVANTAGES */
 .advantages{
   background:#111;
   color:#fff;
@@ -340,11 +329,6 @@ header{
   background:#1c1c1c;
   padding:28px 20px;
   border-radius:20px;
-  transition:.3s;
-}
-
-.adv:hover{
-  transform:translateY(-7px);
 }
 
 .icon{
@@ -357,45 +341,260 @@ header{
   font-size:14px;
 }
 
-.reviews{
-  max-width:1050px;
-  margin:65px auto;
-  padding:20px;
-  text-align:center;
+/* CART OVERLAY */
+.overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:2000;
 }
 
-.reviews h2{
-  font-size:32px;
-  margin-bottom:30px;
+.overlay.show{
+  display:block;
 }
 
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.review{
+.cart-panel{
+  position:absolute;
+  top:0;
+  left:0;
+  width:min(470px,100%);
+  height:100%;
   background:#fff;
   padding:25px;
-  border-radius:20px;
-  box-shadow:0 8px 30px rgba(0,0,0,.06);
+  overflow-y:auto;
+  animation:slideIn .3s ease;
 }
 
-.review-stars{
-  color:#e3a000;
+.cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
 }
 
-.review p{
-  color:#666;
+.close-cart{
+  border:none;
+  background:#eee;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:20px;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns:70px 1fr;
+  gap:12px;
+  padding:15px 0;
+  border-bottom:1px solid #eee;
+}
+
+.cart-item-image{
+  width:70px;
+  height:70px;
+  background:#f1f3f3;
+  border-radius:14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.cart-item-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.cart-item-info h4{
+  font-size:15px;
+}
+
+.cart-item-price{
+  font-weight:bold;
+  margin:3px 0;
+}
+
+.qty-controls{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:7px;
+}
+
+.qty-controls button{
+  width:30px;
+  height:30px;
+  border:none;
+  border-radius:8px;
+  background:#eee;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.remove-item{
+  color:#c62828;
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.cart-total{
+  background:#f3f3f3;
+  padding:17px;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  margin:20px 0;
+}
+
+.checkout-btn{
+  width:100%;
+  border:none;
+  background:#111;
+  color:#fff;
+  padding:15px;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.empty-cart{
+  text-align:center;
+  color:#777;
+  padding:50px 10px;
+}
+
+/* CHECKOUT */
+.checkout{
+  display:none;
+  max-width:700px;
+  margin:30px auto 80px;
+  padding:20px;
+}
+
+.checkout.show{
+  display:block;
+}
+
+.order-card{
+  background:#fff;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 12px 40px rgba(0,0,0,.08);
+}
+
+.order-card h2{
+  margin-bottom:20px;
+}
+
+.input-group{
+  margin-bottom:15px;
+}
+
+.input-group label{
+  display:block;
+  font-weight:bold;
+  margin-bottom:6px;
   font-size:14px;
 }
 
-.review b{
-  display:block;
-  margin-top:10px;
+.input-group input,
+.input-group select{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:13px;
+  background:#fafafa;
+  outline:none;
+  font-size:15px;
 }
 
+.input-group input:focus,
+.input-group select:focus{
+  border-color:#087c68;
+  background:#fff;
+}
+
+.delivery-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.delivery-option{
+  border:2px solid #ddd;
+  border-radius:15px;
+  padding:15px;
+  cursor:pointer;
+  text-align:center;
+  background:#fff;
+}
+
+.delivery-option.selected{
+  border-color:#087c68;
+  background:#eaf7f3;
+}
+
+.delivery-option input{
+  display:none;
+}
+
+.checkout-total{
+  background:#f2f2f2;
+  padding:17px;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-between;
+  margin:20px 0;
+  font-weight:bold;
+}
+
+.order-btn{
+  width:100%;
+  border:none;
+  background:linear-gradient(135deg,#111,#087c68);
+  color:#fff;
+  padding:16px;
+  border-radius:15px;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.order-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.status{
+  display:none;
+  text-align:center;
+  margin-top:12px;
+  padding:10px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.success{
+  display:block;
+  background:#e7f8ef;
+  color:#087c68;
+}
+
+.error{
+  display:block;
+  background:#ffeaea;
+  color:#c62828;
+}
+
+/* FOOTER */
 footer{
   background:#eee;
   text-align:center;
@@ -404,10 +603,11 @@ footer{
   font-size:13px;
 }
 
+/* ANIMATION */
 @keyframes fadeUp{
   from{
     opacity:0;
-    transform:translateY(25px);
+    transform:translateY(20px);
   }
   to{
     opacity:1;
@@ -415,47 +615,57 @@ footer{
   }
 }
 
-@media(max-width:800px){
-
-  .product{
-    grid-template-columns:1fr;
+@keyframes slideIn{
+  from{
+    transform:translateX(-100%);
   }
-
-  .main-image{
-    height:350px;
+  to{
+    transform:translateX(0);
   }
-
-  .adv-grid,
-  .review-grid{
-    grid-template-columns:1fr;
-  }
-
 }
 
-@media(max-width:500px){
+/* RESPONSIVE */
+@media(max-width:900px){
+  .category-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .nav{
+    padding:12px 15px;
+  }
+
+  .logo{
+    font-size:24px;
+  }
+
+  .cart-button{
+    padding:9px 13px;
+  }
 
   .hero{
-    padding-top:35px;
+    padding:45px 18px 30px;
   }
 
-  .main-image{
-    height:300px;
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .thumbs img{
-    height:65px;
-  }
-
-  .product-info h2{
-    font-size:28px;
-  }
-
-  .price{
-    font-size:31px;
-  }
-
-  .row{
+  .product-grid{
     grid-template-columns:1fr;
+  }
+
+  .delivery-options{
+    grid-template-columns:1fr;
+  }
+
+  .product-image-box{
+    height:300px;
   }
 }
 </style>
@@ -466,272 +676,99 @@ footer{
 <header>
   <div class="nav">
     <div class="logo">Imy Store</div>
-    <a href="#order">اطلبي الآن</a>
+
+    <button class="cart-button" id="openCart">
+      🛒 السلة
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
   </div>
 </header>
 
 <section class="hero">
-
-  <div class="badge">✨ منتج مميز</div>
+  <div class="badge">✨ مرحبًا بكِ في Imy Store</div>
 
   <h1>
-    Dr. Althea
+    اكتشفي
     <br>
-    <span>345 Relief Cream</span>
+    <span>منتجاتك المفضلة</span>
   </h1>
 
   <p>
-    كريم 345 للعناية بالبشرة بتركيبة مريحة ومناسبة للاستخدام اليومي.
+    منتجات مختارة للعناية بالبشرة والجمال والصحة، مع طلب سهل والدفع عند الاستلام.
   </p>
-
 </section>
 
-<section class="product">
+<section class="categories">
 
-  <div class="gallery">
+  <h2 class="section-title">
+    🛍️ تسوقي حسب الفئة
+  </h2>
 
-    <img
-      id="mainImage"
-      class="main-image"
-      src="product4.jpg"
-      alt="Dr Althea 345 Relief Cream"
-    >
+  <div class="category-grid">
 
-    <div class="thumbs">
+    <button class="category active" data-category="skincare">
+      <span class="category-icon">🧴</span>
+      العناية بالبشرة
+    </button>
 
-      <img src="product1.jpg"
-           onclick="changeImage('product1.jpg')">
+    <button class="category" data-category="beauty">
+      <span class="category-icon">💄</span>
+      مستحضرات التجميل
+    </button>
 
-      <img src="product2.jpg"
-           onclick="changeImage('product2.jpg')">
+    <button class="category" data-category="medical">
+      <span class="category-icon">🩺</span>
+      منتجات طبية وصحية
+    </button>
 
-      <img src="product3.jpg"
-           onclick="changeImage('product3.jpg')">
+    <button class="category" data-category="hair">
+      <span class="category-icon">💇‍♀️</span>
+      العناية بالشعر
+    </button>
 
-      <img src="product4.jpg"
-           onclick="changeImage('product4.jpg')">
-
-    </div>
-
-  </div>
-
-
-  <div class="product-info">
-
-    <div class="rating">
-      ★★★★★
-    </div>
-
-    <h2>
-      Dr. Althea 345 Relief Cream 50ml
-    </h2>
-
-    <p class="description">
-      كريم عناية بالبشرة بتركيبة مريحة ومناسبة للاستخدام اليومي.
-    </p>
-
-    <div class="price-box">
-
-      <span class="old-price">
-        5,000 DA
-      </span>
-
-      <span class="price">
-        4,490 DA
-      </span>
-
-      <span class="discount">
-        -10%
-      </span>
-
-    </div>
-
-
-    <div class="features">
-
-      <div class="feature">
-        🧴
-        <b>50ml</b>
-        <span>الحجم</span>
-      </div>
-
-      <div class="feature">
-        🚚
-        <b>الدفع عند الاستلام</b>
-        <span>COD</span>
-      </div>
-
-      <div class="feature">
-        🇩🇿
-        <b>كل الولايات</b>
-        <span>التوصيل في الجزائر</span>
-      </div>
-
-      <div class="feature">
-        ✨
-        <b>Dr. Althea</b>
-        <span>345 Relief Cream</span>
-      </div>
-
-    </div>
-
-
-    <div class="order-card" id="order">
-
-      <h3>
-        🛍️ أكملي طلبك
-      </h3>
-
-      <form id="orderForm">
-
-        <div class="input-group">
-          <label>الاسم واللقب</label>
-
-          <input
-            type="text"
-            id="name"
-            placeholder="اكتبي الاسم واللقب"
-            required
-          >
-        </div>
-
-
-        <div class="input-group">
-          <label>رقم الهاتف</label>
-
-          <input
-            type="tel"
-            id="phone"
-            placeholder="مثال: 0550123456"
-            required
-          >
-        </div>
-
-
-        <div class="input-group">
-          <label>الولاية</label>
-
-          <select id="wilaya" required>
-            <option value="">
-              جاري تحميل الولايات...
-            </option>
-          </select>
-
-        </div>
-
-
-        <div class="input-group">
-          <label>البلدية</label>
-
-          <select id="commune" required disabled>
-            <option value="">
-              اختاري الولاية أولاً
-            </option>
-          </select>
-
-        </div>
-
-
-        <div class="input-group">
-          <label>الكمية</label>
-
-          <select id="quantity">
-
-            <option value="1">
-              1 قطعة
-            </option>
-
-            <option value="2">
-              2 قطع
-            </option>
-
-            <option value="3">
-              3 قطع
-            </option>
-
-            <option value="4">
-              4 قطع
-            </option>
-
-            <option value="5">
-              5 قطع
-            </option>
-
-          </select>
-        </div>
-
-
-        <div class="total">
-
-          <span>
-            المجموع
-          </span>
-
-          <span
-            class="total-price"
-            id="totalPrice"
-          >
-            4,490 DA
-          </span>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="order-btn"
-          id="orderButton"
-        >
-          🛍️ تأكيد الطلب
-        </button>
-
-
-        <div
-          id="status"
-          class="status"
-        ></div>
-
-      </form>
-
-    </div>
+    <button class="category" data-category="body">
+      <span class="category-icon">🧼</span>
+      العناية بالجسم
+    </button>
 
   </div>
-
 </section>
 
+<section class="products-section">
+
+  <div class="category-heading">
+    <h2 id="categoryTitle">🧴 العناية بالبشرة</h2>
+    <span id="productNumber">3 منتجات</span>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+
+</section>
 
 <section class="advantages">
 
   <div class="advantages-container">
 
-    <h2>
-      لماذا Imy Store؟
-    </h2>
+    <h2>لماذا Imy Store؟</h2>
 
     <div class="adv-grid">
 
       <div class="adv">
         <div class="icon">🚚</div>
-        <h3>توصيل للولايات</h3>
-        <p>
-          نستقبل الطلبات من مختلف ولايات الجزائر.
-        </p>
+        <h3>توصيل مرن</h3>
+        <p>اختاري التوصيل إلى المنزل أو الاستلام من المكتب.</p>
       </div>
 
       <div class="adv">
         <div class="icon">💵</div>
         <h3>الدفع عند الاستلام</h3>
-        <p>
-          الدفع عند وصول الطلب.
-        </p>
+        <p>ادفعي عند استلام طلبك.</p>
       </div>
 
       <div class="adv">
-        <div class="icon">📱</div>
-        <h3>طلب سهل</h3>
-        <p>
-          املئي المعلومات وأرسلي طلبك مباشرة.
-        </p>
+        <div class="icon">🛒</div>
+        <h3>سلة سهلة</h3>
+        <p>أضيفي عدة منتجات في طلب واحد.</p>
       </div>
 
     </div>
@@ -740,142 +777,893 @@ footer{
 
 </section>
 
+<!-- CART -->
 
-<section class="reviews">
+<div class="overlay" id="cartOverlay">
 
-  <h2>
-    آراء الزبائن
-  </h2>
+  <div class="cart-panel">
 
-  <div class="review-grid">
+    <div class="cart-header">
 
-    <div class="review">
+      <h2>🛒 سلة المشتريات</h2>
 
-      <div class="review-stars">
-        ★★★★★
-      </div>
-
-      <p>
-        منتج رائع والتوصيل كان سريعًا.
-      </p>
-
-      <b>
-        زبونة Imy Store
-      </b>
+      <button class="close-cart" id="closeCart">
+        ×
+      </button>
 
     </div>
 
+    <div id="cartItems"></div>
 
-    <div class="review">
+    <div id="cartBottom" style="display:none;">
 
-      <div class="review-stars">
-        ★★★★★
+      <div class="cart-total">
+        <span>المجموع</span>
+        <span id="cartTotal">0 DA</span>
       </div>
 
-      <p>
-        طريقة الطلب سهلة جدًا.
-      </p>
-
-      <b>
-        زبونة Imy Store
-      </b>
-
-    </div>
-
-
-    <div class="review">
-
-      <div class="review-stars">
-        ★★★★★
-      </div>
-
-      <p>
-        التغليف والمنتج ممتازان.
-      </p>
-
-      <b>
-        زبونة Imy Store
-      </b>
+      <button class="checkout-btn" id="goCheckout">
+        متابعة وإتمام الطلب
+      </button>
 
     </div>
 
   </div>
 
-</section>
+</div>
 
+<!-- CHECKOUT -->
+
+<section class="checkout" id="checkout">
+
+  <div class="order-card">
+
+    <h2>🛍️ إتمام الطلب</h2>
+
+    <div class="input-group">
+
+      <label>الاسم واللقب</label>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="اكتبي الاسم واللقب"
+        required
+      >
+
+    </div>
+
+    <div class="input-group">
+
+      <label>رقم الهاتف</label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="مثال: 0550123456"
+        required
+      >
+
+    </div>
+
+    <div class="input-group">
+
+      <label>طريقة التوصيل</label>
+
+      <div class="delivery-options">
+
+        <label class="delivery-option selected" id="homeOption">
+
+          <input
+            type="radio"
+            name="delivery"
+            value="توصيل إلى المنزل"
+            checked
+          >
+
+          🏠
+          <br>
+          توصيل إلى المنزل
+
+        </label>
+
+        <label class="delivery-option" id="officeOption">
+
+          <input
+            type="radio"
+            name="delivery"
+            value="استلام من المكتب"
+          >
+
+          🏢
+          <br>
+          استلام من المكتب
+
+        </label>
+
+      </div>
+
+    </div>
+
+    <div id="homeFields">
+
+      <div class="input-group">
+
+        <label>الولاية</label>
+
+        <select id="wilaya">
+
+          <option value="">
+            جاري تحميل الولايات...
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="input-group">
+
+        <label>البلدية</label>
+
+        <select id="commune" disabled>
+
+          <option value="">
+            اختاري الولاية أولاً
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <div class="checkout-total">
+
+      <span>المجموع</span>
+
+      <span id="checkoutTotal">0 DA</span>
+
+    </div>
+
+    <button
+      type="button"
+      class="order-btn"
+      id="orderButton"
+    >
+      🛍️ تأكيد الطلب
+    </button>
+
+    <div id="status" class="status"></div>
+
+  </div>
+
+</section>
 
 <footer>
-
   © 2026 Imy Store
   <br>
   جميع الحقوق محفوظة
-
 </footer>
-
 
 <script>
 
 /* =========================================
-   إعدادات المتجر
+   إعدادات
 ========================================= */
 
-const PRODUCT_PRICE = 4490;
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbwCXETTfabBbXB6msZkxmx1gzVuqpFdguPil5cekWr94-I5ra1Cvq-RTS-mBB7EDPSb/exec";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCXETTfabBbXB6msZkxmx1gzVuqpFdguPil5cekWr94-I5ra1Cvq-RTS-mBB7EDPSb/exec";
 
 /* =========================================
-   الصور
+   المنتجات التجريبية
 ========================================= */
 
-function changeImage(image){
+const products = [
 
-  const mainImage =
-    document.getElementById("mainImage");
+  {
+    id:"skin1",
+    category:"skincare",
+    name:"Dr. Althea 345 Relief Cream 50ml",
+    price:4490,
+    oldPrice:5000,
+    image:"product4.jpg",
+    description:"كريم عناية بالبشرة بتركيبة مريحة للاستخدام اليومي.",
+    rating:"★★★★★"
+  },
 
-  mainImage.style.opacity = "0";
+  {
+    id:"skin2",
+    category:"skincare",
+    name:"Hydra Glow Cream",
+    price:3200,
+    oldPrice:3800,
+    emoji:"🧴",
+    description:"كريم ترطيب تجريبي للبشرة.",
+    rating:"★★★★★"
+  },
 
-  setTimeout(function(){
+  {
+    id:"skin3",
+    category:"skincare",
+    name:"Pure Skin Serum",
+    price:2800,
+    oldPrice:3200,
+    emoji:"✨",
+    description:"سيروم تجريبي للعناية بالبشرة.",
+    rating:"★★★★☆"
+  },
 
-    mainImage.src = image;
 
-    mainImage.style.opacity = "1";
+  {
+    id:"beauty1",
+    category:"beauty",
+    name:"Velvet Matte Lipstick",
+    price:1800,
+    oldPrice:2200,
+    emoji:"💄",
+    description:"أحمر شفاه تجريبي بلمسة أنيقة.",
+    rating:"★★★★★"
+  },
 
-  },150);
+  {
+    id:"beauty2",
+    category:"beauty",
+    name:"Glow Makeup Palette",
+    price:3500,
+    oldPrice:4200,
+    emoji:"🎨",
+    description:"لوحة مكياج تجريبية.",
+    rating:"★★★★★"
+  },
+
+  {
+    id:"beauty3",
+    category:"beauty",
+    name:"Soft Touch Mascara",
+    price:1600,
+    oldPrice:1900,
+    emoji:"🖤",
+    description:"ماسكارا تجريبية للرموش.",
+    rating:"★★★★☆"
+  },
+
+
+  {
+    id:"medical1",
+    category:"medical",
+    name:"Health Product One",
+    price:2500,
+    oldPrice:3000,
+    emoji:"🩺",
+    description:"منتج صحي تجريبي.",
+    rating:"★★★★★"
+  },
+
+  {
+    id:"medical2",
+    category:"medical",
+    name:"Care Medical Product",
+    price:2900,
+    oldPrice:3500,
+    emoji:"💊",
+    description:"منتج طبي تجريبي.",
+    rating:"★★★★☆"
+  },
+
+  {
+    id:"medical3",
+    category:"medical",
+    name:"Daily Health Care",
+    price:2100,
+    oldPrice:2600,
+    emoji:"❤️",
+    description:"منتج للعناية الصحية اليومية.",
+    rating:"★★★★★"
+  },
+
+
+  {
+    id:"hair1",
+    category:"hair",
+    name:"Silky Hair Mask",
+    price:2400,
+    oldPrice:2900,
+    emoji:"💇‍♀️",
+    description:"ماسك شعر تجريبي.",
+    rating:"★★★★★"
+  },
+
+  {
+    id:"hair2",
+    category:"hair",
+    name:"Hair Repair Serum",
+    price:2700,
+    oldPrice:3200,
+    emoji:"✨",
+    description:"سيروم شعر تجريبي.",
+    rating:"★★★★☆"
+  },
+
+  {
+    id:"hair3",
+    category:"hair",
+    name:"Smooth Hair Shampoo",
+    price:1900,
+    oldPrice:2300,
+    emoji:"🧴",
+    description:"شامبو تجريبي للعناية بالشعر.",
+    rating:"★★★★★"
+  },
+
+
+  {
+    id:"body1",
+    category:"body",
+    name:"Soft Body Cream",
+    price:2200,
+    oldPrice:2700,
+    emoji:"🧼",
+    description:"كريم جسم تجريبي.",
+    rating:"★★★★★"
+  },
+
+  {
+    id:"body2",
+    category:"body",
+    name:"Fresh Body Lotion",
+    price:2300,
+    oldPrice:2800,
+    emoji:"🌸",
+    description:"لوشن جسم تجريبي.",
+    rating:"★★★★☆"
+  },
+
+  {
+    id:"body3",
+    category:"body",
+    name:"Body Care Scrub",
+    price:2000,
+    oldPrice:2400,
+    emoji:"🫧",
+    description:"مقشر جسم تجريبي.",
+    rating:"★★★★★"
+  }
+
+];
+
+
+/* =========================================
+   أسماء الفئات
+========================================= */
+
+const categoryNames = {
+
+  skincare:"🧴 العناية بالبشرة",
+
+  beauty:"💄 مستحضرات التجميل",
+
+  medical:"🩺 منتجات طبية وصحية",
+
+  hair:"💇‍♀️ العناية بالشعر",
+
+  body:"🧼 العناية بالجسم"
+
+};
+
+
+/* =========================================
+   السلة
+========================================= */
+
+let cart = [];
+
+let currentCategory = "skincare";
+
+
+/* =========================================
+   عناصر الصفحة
+========================================= */
+
+const productGrid =
+document.getElementById("productGrid");
+
+const categoryTitle =
+document.getElementById("categoryTitle");
+
+const productNumber =
+document.getElementById("productNumber");
+
+const cartCount =
+document.getElementById("cartCount");
+
+const cartOverlay =
+document.getElementById("cartOverlay");
+
+const cartItems =
+document.getElementById("cartItems");
+
+const cartBottom =
+document.getElementById("cartBottom");
+
+const cartTotal =
+document.getElementById("cartTotal");
+
+const checkoutTotal =
+document.getElementById("checkoutTotal");
+
+const checkout =
+document.getElementById("checkout");
+
+
+/* =========================================
+   عرض المنتجات
+========================================= */
+
+function renderProducts(category){
+
+  currentCategory = category;
+
+  const filtered =
+    products.filter(function(product){
+      return product.category === category;
+    });
+
+  categoryTitle.textContent =
+    categoryNames[category];
+
+  productNumber.textContent =
+    filtered.length + " منتجات";
+
+  productGrid.innerHTML = "";
+
+  filtered.forEach(function(product){
+
+    const card =
+      document.createElement("div");
+
+    card.className = "product-card";
+
+    let imageHTML = "";
+
+    if(product.image){
+
+      imageHTML =
+      `<img src="${product.image}" alt="${product.name}">`;
+
+    }else{
+
+      imageHTML =
+      `<div class="demo-image">${product.emoji}</div>`;
+
+    }
+
+    const discount =
+      product.oldPrice > product.price
+      ? Math.round(
+          (1 - product.price / product.oldPrice) * 100
+        )
+      : 0;
+
+    card.innerHTML = `
+
+      <div class="product-image-box">
+
+        ${imageHTML}
+
+        ${
+          discount > 0
+          ? `<div class="sale">-${discount}%</div>`
+          : ""
+        }
+
+      </div>
+
+      <div class="product-content">
+
+        <div class="product-rating">
+          ${product.rating}
+        </div>
+
+        <h3 class="product-name">
+          ${product.name}
+        </h3>
+
+        <p class="product-description">
+          ${product.description}
+        </p>
+
+        <div class="price-row">
+
+          <span class="current-price">
+            ${formatPrice(product.price)} DA
+          </span>
+
+          ${
+            product.oldPrice
+            ? `
+              <span class="old-price">
+                ${formatPrice(product.oldPrice)} DA
+              </span>
+            `
+            : ""
+          }
+
+        </div>
+
+        <button
+          class="add-cart"
+          onclick="addToCart('${product.id}')"
+        >
+          🛒 أضف إلى السلة
+        </button>
+
+      </div>
+
+    `;
+
+    productGrid.appendChild(card);
+
+  });
 
 }
 
 
 /* =========================================
-   السعر
+   تغيير الفئة
 ========================================= */
 
-const quantitySelect =
-  document.getElementById("quantity");
+document.querySelectorAll(".category")
+.forEach(function(button){
 
-const totalPrice =
-  document.getElementById("totalPrice");
+  button.addEventListener("click",function(){
+
+    document.querySelectorAll(".category")
+    .forEach(function(item){
+      item.classList.remove("active");
+    });
+
+    this.classList.add("active");
+
+    renderProducts(
+      this.dataset.category
+    );
+
+    document.querySelector(".products-section")
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+
+  });
+
+});
 
 
-function updateTotal(){
+/* =========================================
+   إضافة للسلة
+========================================= */
 
-  const quantity =
-    Number(quantitySelect.value);
+function addToCart(productId){
 
-  const total =
-    PRODUCT_PRICE * quantity;
+  const existing =
+    cart.find(function(item){
+      return item.id === productId;
+    });
 
-  totalPrice.textContent =
-    total.toLocaleString("fr-DZ") + " DA";
+  if(existing){
+
+    existing.quantity += 1;
+
+  }else{
+
+    cart.push({
+      id:productId,
+      quantity:1
+    });
+
+  }
+
+  updateCart();
+
+  openCart();
 
 }
 
 
-quantitySelect.addEventListener(
-  "change",
-  updateTotal
-);
+/* =========================================
+   تغيير الكمية
+========================================= */
 
-updateTotal();
+function changeQuantity(productId, change){
+
+  const item =
+    cart.find(function(item){
+      return item.id === productId;
+    });
+
+  if(!item){
+    return;
+  }
+
+  item.quantity += change;
+
+  if(item.quantity <= 0){
+
+    cart =
+      cart.filter(function(cartItem){
+        return cartItem.id !== productId;
+      });
+
+  }
+
+  updateCart();
+
+}
+
+
+/* =========================================
+   حذف المنتج
+========================================= */
+
+function removeFromCart(productId){
+
+  cart =
+    cart.filter(function(item){
+      return item.id !== productId;
+    });
+
+  updateCart();
+
+}
+
+
+/* =========================================
+   تحديث السلة
+========================================= */
+
+function updateCart(){
+
+  let totalQuantity = 0;
+  let totalPriceValue = 0;
+
+  cart.forEach(function(item){
+
+    const product =
+      products.find(function(p){
+        return p.id === item.id;
+      });
+
+    if(product){
+
+      totalQuantity += item.quantity;
+
+      totalPriceValue +=
+        product.price * item.quantity;
+
+    }
+
+  });
+
+  cartCount.textContent =
+    totalQuantity;
+
+  cartTotal.textContent =
+    formatPrice(totalPriceValue) + " DA";
+
+  checkoutTotal.textContent =
+    formatPrice(totalPriceValue) + " DA";
+
+
+  if(cart.length === 0){
+
+    cartItems.innerHTML = `
+      <div class="empty-cart">
+        🛒
+        <br><br>
+        السلة فارغة حاليًا
+      </div>
+    `;
+
+    cartBottom.style.display = "none";
+
+    return;
+
+  }
+
+  cartBottom.style.display = "block";
+
+  cartItems.innerHTML = "";
+
+  cart.forEach(function(item){
+
+    const product =
+      products.find(function(p){
+        return p.id === item.id;
+      });
+
+    if(!product){
+      return;
+    }
+
+    let imageHTML = "";
+
+    if(product.image){
+
+      imageHTML =
+      `<img src="${product.image}" alt="${product.name}">`;
+
+    }else{
+
+      imageHTML =
+      `<span style="font-size:35px">${product.emoji}</span>`;
+
+    }
+
+    const itemElement =
+      document.createElement("div");
+
+    itemElement.className = "cart-item";
+
+    itemElement.innerHTML = `
+
+      <div class="cart-item-image">
+        ${imageHTML}
+      </div>
+
+      <div class="cart-item-info">
+
+        <h4>
+          ${product.name}
+        </h4>
+
+        <div class="cart-item-price">
+          ${formatPrice(product.price)} DA
+        </div>
+
+        <div class="qty-controls">
+
+          <button
+            onclick="changeQuantity('${product.id}',1)"
+          >
+            +
+          </button>
+
+          <strong>
+            ${item.quantity}
+          </strong>
+
+          <button
+            onclick="changeQuantity('${product.id}',-1)"
+          >
+            −
+          </button>
+
+          <button
+            class="remove-item"
+            onclick="removeFromCart('${product.id}')"
+          >
+            حذف
+          </button>
+
+        </div>
+
+      </div>
+
+    `;
+
+    cartItems.appendChild(itemElement);
+
+  });
+
+}
+
+
+/* =========================================
+   فتح السلة
+========================================= */
+
+function openCart(){
+
+  cartOverlay.classList.add("show");
+
+}
+
+
+/* =========================================
+   إغلاق السلة
+========================================= */
+
+function closeCart(){
+
+  cartOverlay.classList.remove("show");
+
+}
+
+
+document.getElementById("openCart")
+.addEventListener("click",openCart);
+
+
+document.getElementById("closeCart")
+.addEventListener("click",closeCart);
+
+
+cartOverlay.addEventListener("click",function(event){
+
+  if(event.target === cartOverlay){
+
+    closeCart();
+
+  }
+
+});
+
+
+/* =========================================
+   الذهاب إلى الطلب
+========================================= */
+
+document.getElementById("goCheckout")
+.addEventListener("click",function(){
+
+  if(cart.length === 0){
+
+    return;
+
+  }
+
+  closeCart();
+
+  checkout.classList.add("show");
+
+  checkout.scrollIntoView({
+    behavior:"smooth"
+  });
+
+});
+
+
+/* =========================================
+   طريقة التوصيل
+========================================= */
+
+const homeOption =
+document.getElementById("homeOption");
+
+const officeOption =
+document.getElementById("officeOption");
+
+const homeFields =
+document.getElementById("homeFields");
+
+
+document.querySelectorAll(
+  'input[name="delivery"]'
+).forEach(function(radio){
+
+  radio.addEventListener("change",function(){
+
+    if(this.value === "توصيل إلى المنزل"){
+
+      homeOption.classList.add("selected");
+
+      officeOption.classList.remove("selected");
+
+      homeFields.style.display = "block";
+
+    }else{
+
+      officeOption.classList.add("selected");
+
+      homeOption.classList.remove("selected");
+
+      homeFields.style.display = "none";
+
+    }
+
+  });
+
+});
 
 
 /* =========================================
@@ -888,17 +1676,18 @@ const WILAYAS_URL =
 const COMMUNES_URL =
 "https://cdn.jsdelivr.net/gh/el-amin-dev/algeria-wilayas-communes@main/data/communes.json";
 
+
 const wilayaSelect =
-  document.getElementById("wilaya");
+document.getElementById("wilaya");
 
 const communeSelect =
-  document.getElementById("commune");
+document.getElementById("commune");
+
 
 let allWilayas = [];
+
 let allCommunes = [];
 
-
-/* تحميل الولايات */
 
 async function loadWilayas(){
 
@@ -922,7 +1711,6 @@ async function loadWilayas(){
     wilayaSelect.innerHTML =
       '<option value="">اختاري الولاية</option>';
 
-
     allWilayas.forEach(function(wilaya){
 
       const option =
@@ -943,14 +1731,18 @@ async function loadWilayas(){
           wilaya.wilaya_num ||
           wilaya.code ||
           ""
-        ) +
-        " - " +
+        )
+        +
+        " - "
+        +
         (
           wilaya.nom_ar ||
           wilaya.name_ar ||
           ""
-        ) +
-        " | " +
+        )
+        +
+        " | "
+        +
         (
           wilaya.nom_fr ||
           wilaya.name_fr ||
@@ -972,8 +1764,6 @@ async function loadWilayas(){
 
 }
 
-
-/* تحميل البلديات */
 
 async function loadCommunes(){
 
@@ -1003,8 +1793,6 @@ async function loadCommunes(){
 }
 
 
-/* عند اختيار الولاية */
-
 wilayaSelect.addEventListener(
   "change",
   function(){
@@ -1020,7 +1808,6 @@ wilayaSelect.addEventListener(
     if(!selectedCode){
       return;
     }
-
 
     const communes =
       allCommunes.filter(function(commune){
@@ -1055,8 +1842,10 @@ wilayaSelect.addEventListener(
           commune.nom_ar ||
           commune.name_ar ||
           ""
-        ) +
-        " | " +
+        )
+        +
+        " | "
+        +
         (
           commune.nom_fr ||
           commune.name_fr ||
@@ -1069,53 +1858,34 @@ wilayaSelect.addEventListener(
 
 
     if(communes.length > 0){
+
       communeSelect.disabled = false;
+
     }
 
   }
 );
 
 
-/* تشغيل تحميل البيانات */
-
-async function initializeLocation(){
-
-  await Promise.all([
-    loadWilayas(),
-    loadCommunes()
-  ]);
-
-}
-
-initializeLocation();
-
-
 /* =========================================
-   إرسال الطلب إلى Google Sheets
+   إرسال الطلب
 ========================================= */
 
-const orderForm =
-  document.getElementById("orderForm");
-
 const orderButton =
-  document.getElementById("orderButton");
+document.getElementById("orderButton");
 
 const statusBox =
-  document.getElementById("status");
+document.getElementById("status");
 
 
-orderForm.addEventListener(
-  "submit",
-  async function(event){
-
-    event.preventDefault();
-
+orderButton.addEventListener(
+  "click",
+  async function(){
 
     const name =
       document.getElementById("name")
       .value
       .trim();
-
 
     const phone =
       document.getElementById("phone")
@@ -1123,28 +1893,22 @@ orderForm.addEventListener(
       .trim();
 
 
-    const wilayaOption =
-      wilayaSelect.options[
-        wilayaSelect.selectedIndex
-      ];
+    const delivery =
+      document.querySelector(
+        'input[name="delivery"]:checked'
+      ).value;
 
 
-    const wilaya =
-      wilayaOption
-      ? wilayaOption.textContent
-      : "";
+    if(cart.length === 0){
 
+      showStatus(
+        "🛒 السلة فارغة.",
+        false
+      );
 
-    const commune =
-      communeSelect.value;
+      return;
 
-
-    const quantity =
-      Number(quantitySelect.value);
-
-
-    const total =
-      PRODUCT_PRICE * quantity;
+    }
 
 
     if(!name){
@@ -1171,28 +1935,92 @@ orderForm.addEventListener(
     }
 
 
-    if(!wilayaSelect.value){
+    let wilaya = "";
 
-      showStatus(
-        "يرجى اختيار الولاية.",
-        false
-      );
+    let commune = "";
 
-      return;
+
+    if(delivery === "توصيل إلى المنزل"){
+
+      if(!wilayaSelect.value){
+
+        showStatus(
+          "يرجى اختيار الولاية.",
+          false
+        );
+
+        return;
+
+      }
+
+
+      if(!communeSelect.value){
+
+        showStatus(
+          "يرجى اختيار البلدية.",
+          false
+        );
+
+        return;
+
+      }
+
+
+      wilaya =
+        wilayaSelect.options[
+          wilayaSelect.selectedIndex
+        ].textContent;
+
+      commune =
+        communeSelect.value;
+
+    }else{
+
+      wilaya = "استلام من المكتب";
+
+      commune = "استلام من المكتب";
 
     }
 
 
-    if(!commune){
+    let total = 0;
 
-      showStatus(
-        "يرجى اختيار البلدية.",
-        false
-      );
+    let totalQuantity = 0;
 
-      return;
+    let productsText = "";
 
-    }
+
+    cart.forEach(function(item){
+
+      const product =
+        products.find(function(p){
+          return p.id === item.id;
+        });
+
+      if(product){
+
+        total +=
+          product.price * item.quantity;
+
+        totalQuantity +=
+          item.quantity;
+
+        productsText +=
+          product.name
+          +
+          " × "
+          +
+          item.quantity
+          +
+          " | ";
+
+      }
+
+    });
+
+
+    productsText =
+      productsText.replace(/\s\|\s$/,"");
 
 
     orderButton.disabled = true;
@@ -1203,42 +2031,43 @@ orderForm.addEventListener(
 
     const orderData = {
 
-      name: name,
+      name:name,
 
-      phone: phone,
+      phone:phone,
 
-      wilaya: wilaya,
+      wilaya:wilaya,
 
-      commune: commune,
+      commune:commune,
 
-      product:
-        "Dr. Althea 345 Relief Cream 50ml",
+      delivery:delivery,
 
-      quantity: quantity,
+      product:productsText,
 
-      total: total
+      quantity:totalQuantity,
+
+      total:total
 
     };
 
 
     try{
 
-      await fetch(GOOGLE_SCRIPT_URL, {
-  method: "POST",
-  headers: {
-    "Content-Type": "text/plain;charset=utf-8"
-  },
-  body: JSON.stringify({
-    name: name,
-    phone: phone,
-    wilaya: wilaya,
-    commune: commune,
-    product: "Dr. Althea 345 Relief Cream",
-    quantity: quantity,
-    total: total
-  }),
-  mode: "no-cors"
-});
+      await fetch(
+        GOOGLE_SCRIPT_URL,
+        {
+          method:"POST",
+
+          headers:{
+            "Content-Type":
+              "text/plain;charset=utf-8"
+          },
+
+          body:
+            JSON.stringify(orderData),
+
+          mode:"no-cors"
+        }
+      );
 
 
       showStatus(
@@ -1247,14 +2076,21 @@ orderForm.addEventListener(
       );
 
 
-      orderForm.reset();
+      cart = [];
+
+      updateCart();
+
+
+      document.getElementById("name").value = "";
+
+      document.getElementById("phone").value = "";
+
+      wilayaSelect.value = "";
 
       communeSelect.innerHTML =
         '<option value="">اختاري الولاية أولاً</option>';
 
       communeSelect.disabled = true;
-
-      updateTotal();
 
 
     }catch(error){
@@ -1279,10 +2115,10 @@ orderForm.addEventListener(
 
 
 /* =========================================
-   رسالة الحالة
+   الرسائل
 ========================================= */
 
-function showStatus(message, success){
+function showStatus(message,success){
 
   statusBox.textContent =
     message;
@@ -1295,7 +2131,6 @@ function showStatus(message, success){
   statusBox.style.display =
     "block";
 
-
   setTimeout(function(){
 
     statusBox.style.display =
@@ -1304,6 +2139,31 @@ function showStatus(message, success){
   },5000);
 
 }
+
+
+/* =========================================
+   تنسيق السعر
+========================================= */
+
+function formatPrice(number){
+
+  return Number(number)
+    .toLocaleString("fr-DZ");
+
+}
+
+
+/* =========================================
+   تشغيل المتجر
+========================================= */
+
+renderProducts("skincare");
+
+updateCart();
+
+loadWilayas();
+
+loadCommunes();
 
 </script>
 
