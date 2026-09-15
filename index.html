@@ -675,17 +675,24 @@ footer{
 
 <header>
   <div class="nav">
-    <div class="logo">Imy Store</div>
+
+    <div class="logo">
+      Imy Store
+    </div>
 
     <button class="cart-button" id="openCart">
       🛒 السلة
       <span class="cart-count" id="cartCount">0</span>
     </button>
+
   </div>
 </header>
 
 <section class="hero">
-  <div class="badge">✨ مرحبًا بكِ في Imy Store</div>
+
+  <div class="badge">
+    ✨ مرحبًا بكِ في Imy Store
+  </div>
 
   <h1>
     اكتشفي
@@ -694,8 +701,10 @@ footer{
   </h1>
 
   <p>
-    منتجات مختارة للعناية بالبشرة والجمال والصحة، مع طلب سهل والدفع عند الاستلام.
+    منتجات مختارة للعناية بالبشرة والجمال والصحة،
+    مع طلب سهل والدفع عند الاستلام.
   </p>
+
 </section>
 
 <section class="categories">
@@ -732,19 +741,26 @@ footer{
     </button>
 
   </div>
+
 </section>
 
 <section class="products-section">
 
   <div class="category-heading">
-    <h2 id="categoryTitle">🧴 العناية بالبشرة</h2>
-    <span id="productNumber">3 منتجات</span>
+
+    <h2 id="categoryTitle">
+      🧴 العناية بالبشرة
+    </h2>
+
+    <span id="productNumber">
+      3 منتجات
+    </span>
+
   </div>
 
   <div class="product-grid" id="productGrid"></div>
 
 </section>
-
 <section class="advantages">
 
   <div class="advantages-container">
@@ -777,7 +793,174 @@ footer{
 
 </section>
 
-<!-- CART -->
+
+<!-- ==============================
+     التقييمات والتعليقات
+================================ -->
+
+<section class="reviews-section" id="reviews">
+
+  <div class="reviews-container">
+
+    <div class="reviews-heading">
+
+      <div>
+        <span class="reviews-badge">💬 آراء العملاء</span>
+
+        <h2>تقييمات وتعليقات الزوار</h2>
+
+        <p>
+          شاركينا رأيك وتجربتك مع منتجات Imy Store.
+        </p>
+      </div>
+
+      <button
+        type="button"
+        class="write-review-btn"
+        id="openReview"
+      >
+        ✍️ أضيفي تعليقًا
+      </button>
+
+    </div>
+
+
+    <!-- اختيار المنتج -->
+
+    <div class="review-product-selector">
+
+      <label for="reviewProduct">
+        المنتج
+      </label>
+
+      <select id="reviewProduct">
+
+        <option value="">
+          اختاري المنتج الذي تريدين تقييمه
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <!-- التعليقات -->
+
+    <div id="reviewsList" class="reviews-list">
+
+      <div class="empty-reviews">
+        ⭐
+        <br><br>
+        لا توجد تعليقات بعد.
+        <br>
+        كوني أول من يشارك رأيه!
+      </div>
+
+    </div>
+
+
+    <!-- نموذج إضافة تعليق -->
+
+    <div
+      class="review-form-box"
+      id="reviewFormBox"
+    >
+
+      <div class="review-form-header">
+
+        <h3>✍️ أضيفي تقييمك</h3>
+
+        <button
+          type="button"
+          class="close-review"
+          id="closeReview"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="input-group">
+
+        <label for="reviewName">
+          الاسم
+        </label>
+
+        <input
+          type="text"
+          id="reviewName"
+          placeholder="اكتبي اسمك"
+          maxlength="40"
+        >
+
+      </div>
+
+
+      <div class="input-group">
+
+        <label>
+          التقييم
+        </label>
+
+        <div class="stars-input" id="starsInput">
+
+          <button type="button" data-rating="1">★</button>
+          <button type="button" data-rating="2">★</button>
+          <button type="button" data-rating="3">★</button>
+          <button type="button" data-rating="4">★</button>
+          <button type="button" data-rating="5">★</button>
+
+        </div>
+
+        <div
+          class="rating-text"
+          id="ratingText"
+        >
+          اختاري عدد النجوم
+        </div>
+
+      </div>
+
+
+      <div class="input-group">
+
+        <label for="reviewText">
+          تعليقك
+        </label>
+
+        <textarea
+          id="reviewText"
+          placeholder="اكتبي رأيك عن المنتج..."
+          maxlength="500"
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="submit-review-btn"
+        id="submitReview"
+      >
+        ⭐ نشر التقييم
+      </button>
+
+      <div
+        id="reviewStatus"
+        class="review-status"
+      ></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==============================
+     CART
+================================ -->
 
 <div class="overlay" id="cartOverlay">
 
@@ -787,7 +970,10 @@ footer{
 
       <h2>🛒 سلة المشتريات</h2>
 
-      <button class="close-cart" id="closeCart">
+      <button
+        class="close-cart"
+        id="closeCart"
+      >
         ×
       </button>
 
@@ -795,14 +981,25 @@ footer{
 
     <div id="cartItems"></div>
 
-    <div id="cartBottom" style="display:none;">
+    <div
+      id="cartBottom"
+      style="display:none;"
+    >
 
       <div class="cart-total">
+
         <span>المجموع</span>
-        <span id="cartTotal">0 DA</span>
+
+        <span id="cartTotal">
+          0 DA
+        </span>
+
       </div>
 
-      <button class="checkout-btn" id="goCheckout">
+      <button
+        class="checkout-btn"
+        id="goCheckout"
+      >
         متابعة وإتمام الطلب
       </button>
 
@@ -812,17 +1009,27 @@ footer{
 
 </div>
 
-<!-- CHECKOUT -->
 
-<section class="checkout" id="checkout">
+<!-- ==============================
+     CHECKOUT
+================================ -->
+
+<section
+  class="checkout"
+  id="checkout"
+>
 
   <div class="order-card">
 
-    <h2>🛍️ إتمام الطلب</h2>
+    <h2>
+      🛍️ إتمام الطلب
+    </h2>
 
     <div class="input-group">
 
-      <label>الاسم واللقب</label>
+      <label>
+        الاسم واللقب
+      </label>
 
       <input
         type="text"
@@ -833,9 +1040,12 @@ footer{
 
     </div>
 
+
     <div class="input-group">
 
-      <label>رقم الهاتف</label>
+      <label>
+        رقم الهاتف
+      </label>
 
       <input
         type="tel"
@@ -846,13 +1056,19 @@ footer{
 
     </div>
 
+
     <div class="input-group">
 
-      <label>طريقة التوصيل</label>
+      <label>
+        طريقة التوصيل
+      </label>
 
       <div class="delivery-options">
 
-        <label class="delivery-option selected" id="homeOption">
+        <label
+          class="delivery-option selected"
+          id="homeOption"
+        >
 
           <input
             type="radio"
@@ -867,7 +1083,11 @@ footer{
 
         </label>
 
-        <label class="delivery-option" id="officeOption">
+
+        <label
+          class="delivery-option"
+          id="officeOption"
+        >
 
           <input
             type="radio"
@@ -885,11 +1105,14 @@ footer{
 
     </div>
 
+
     <div id="homeFields">
 
       <div class="input-group">
 
-        <label>الولاية</label>
+        <label>
+          الولاية
+        </label>
 
         <select id="wilaya">
 
@@ -901,11 +1124,17 @@ footer{
 
       </div>
 
+
       <div class="input-group">
 
-        <label>البلدية</label>
+        <label>
+          البلدية
+        </label>
 
-        <select id="commune" disabled>
+        <select
+          id="commune"
+          disabled
+        >
 
           <option value="">
             اختاري الولاية أولاً
@@ -917,13 +1146,19 @@ footer{
 
     </div>
 
+
     <div class="checkout-total">
 
-      <span>المجموع</span>
+      <span>
+        المجموع
+      </span>
 
-      <span id="checkoutTotal">0 DA</span>
+      <span id="checkoutTotal">
+        0 DA
+      </span>
 
     </div>
+
 
     <button
       type="button"
@@ -933,17 +1168,27 @@ footer{
       🛍️ تأكيد الطلب
     </button>
 
-    <div id="status" class="status"></div>
+
+    <div
+      id="status"
+      class="status"
+    ></div>
 
   </div>
 
 </section>
 
+
 <footer>
+
   © 2026 Imy Store
+
   <br>
+
   جميع الحقوق محفوظة
+
 </footer>
+
 
 <script>
 
@@ -956,7 +1201,7 @@ const GOOGLE_SCRIPT_URL =
 
 
 /* =========================================
-   المنتجات التجريبية
+   المنتجات
 ========================================= */
 
 const products = [
@@ -994,7 +1239,6 @@ const products = [
     rating:"★★★★☆"
   },
 
-
   {
     id:"beauty1",
     category:"beauty",
@@ -1027,7 +1271,6 @@ const products = [
     description:"ماسكارا تجريبية للرموش.",
     rating:"★★★★☆"
   },
-
 
   {
     id:"medical1",
@@ -1062,7 +1305,6 @@ const products = [
     rating:"★★★★★"
   },
 
-
   {
     id:"hair1",
     category:"hair",
@@ -1095,7 +1337,6 @@ const products = [
     description:"شامبو تجريبي للعناية بالشعر.",
     rating:"★★★★★"
   },
-
 
   {
     id:"body1",
@@ -1424,6 +1665,7 @@ function removeFromCart(productId){
 function updateCart(){
 
   let totalQuantity = 0;
+
   let totalPriceValue = 0;
 
   cart.forEach(function(item){
@@ -1435,7 +1677,8 @@ function updateCart(){
 
     if(product){
 
-      totalQuantity += item.quantity;
+      totalQuantity +=
+        item.quantity;
 
       totalPriceValue +=
         product.price * item.quantity;
@@ -1457,22 +1700,32 @@ function updateCart(){
   if(cart.length === 0){
 
     cartItems.innerHTML = `
+
       <div class="empty-cart">
+
         🛒
+
         <br><br>
+
         السلة فارغة حاليًا
+
       </div>
+
     `;
 
-    cartBottom.style.display = "none";
+    cartBottom.style.display =
+      "none";
 
     return;
 
   }
 
-  cartBottom.style.display = "block";
+
+  cartBottom.style.display =
+    "block";
 
   cartItems.innerHTML = "";
+
 
   cart.forEach(function(item){
 
@@ -1502,7 +1755,8 @@ function updateCart(){
     const itemElement =
       document.createElement("div");
 
-    itemElement.className = "cart-item";
+    itemElement.className =
+      "cart-item";
 
     itemElement.innerHTML = `
 
@@ -1559,7 +1813,7 @@ function updateCart(){
 
 
 /* =========================================
-   فتح السلة
+   فتح وإغلاق السلة
 ========================================= */
 
 function openCart(){
@@ -1569,10 +1823,6 @@ function openCart(){
 }
 
 
-/* =========================================
-   إغلاق السلة
-========================================= */
-
 function closeCart(){
 
   cartOverlay.classList.remove("show");
@@ -1581,22 +1831,31 @@ function closeCart(){
 
 
 document.getElementById("openCart")
-.addEventListener("click",openCart);
+.addEventListener(
+  "click",
+  openCart
+);
 
 
 document.getElementById("closeCart")
-.addEventListener("click",closeCart);
+.addEventListener(
+  "click",
+  closeCart
+);
 
 
-cartOverlay.addEventListener("click",function(event){
+cartOverlay.addEventListener(
+  "click",
+  function(event){
 
-  if(event.target === cartOverlay){
+    if(event.target === cartOverlay){
 
-    closeCart();
+      closeCart();
+
+    }
 
   }
-
-});
+);
 
 
 /* =========================================
@@ -1604,23 +1863,24 @@ cartOverlay.addEventListener("click",function(event){
 ========================================= */
 
 document.getElementById("goCheckout")
-.addEventListener("click",function(){
+.addEventListener(
+  "click",
+  function(){
 
-  if(cart.length === 0){
+    if(cart.length === 0){
+      return;
+    }
 
-    return;
+    closeCart();
+
+    checkout.classList.add("show");
+
+    checkout.scrollIntoView({
+      behavior:"smooth"
+    });
 
   }
-
-  closeCart();
-
-  checkout.classList.add("show");
-
-  checkout.scrollIntoView({
-    behavior:"smooth"
-  });
-
-});
+);
 
 
 /* =========================================
@@ -1641,27 +1901,43 @@ document.querySelectorAll(
   'input[name="delivery"]'
 ).forEach(function(radio){
 
-  radio.addEventListener("change",function(){
+  radio.addEventListener(
+    "change",
+    function(){
 
-    if(this.value === "توصيل إلى المنزل"){
+      if(
+        this.value ===
+        "توصيل إلى المنزل"
+      ){
 
-      homeOption.classList.add("selected");
+        homeOption.classList.add(
+          "selected"
+        );
 
-      officeOption.classList.remove("selected");
+        officeOption.classList.remove(
+          "selected"
+        );
 
-      homeFields.style.display = "block";
+        homeFields.style.display =
+          "block";
 
-    }else{
+      }else{
 
-      officeOption.classList.add("selected");
+        officeOption.classList.add(
+          "selected"
+        );
 
-      homeOption.classList.remove("selected");
+        homeOption.classList.remove(
+          "selected"
+        );
 
-      homeFields.style.display = "none";
+        homeFields.style.display =
+          "none";
+
+      }
 
     }
-
-  });
+  );
 
 });
 
@@ -1697,7 +1973,11 @@ async function loadWilayas(){
       await fetch(WILAYAS_URL);
 
     if(!response.ok){
-      throw new Error("Wilayas error");
+
+      throw new Error(
+        "Wilayas error"
+      );
+
     }
 
     const data =
@@ -1711,47 +1991,55 @@ async function loadWilayas(){
     wilayaSelect.innerHTML =
       '<option value="">اختاري الولاية</option>';
 
-    allWilayas.forEach(function(wilaya){
 
-      const option =
-        document.createElement("option");
+    allWilayas.forEach(
+      function(wilaya){
 
-      const code =
-        String(
-          wilaya.code ||
-          wilaya.wilaya_code ||
-          wilaya.wilaya_num ||
-          ""
+        const option =
+          document.createElement(
+            "option"
+          );
+
+        const code =
+          String(
+            wilaya.code ||
+            wilaya.wilaya_code ||
+            wilaya.wilaya_num ||
+            ""
+          );
+
+        option.value =
+          code;
+
+        option.textContent =
+          (
+            wilaya.wilaya_num ||
+            wilaya.code ||
+            ""
+          )
+          +
+          " - "
+          +
+          (
+            wilaya.nom_ar ||
+            wilaya.name_ar ||
+            ""
+          )
+          +
+          " | "
+          +
+          (
+            wilaya.nom_fr ||
+            wilaya.name_fr ||
+            ""
+          );
+
+        wilayaSelect.appendChild(
+          option
         );
 
-      option.value = code;
-
-      option.textContent =
-        (
-          wilaya.wilaya_num ||
-          wilaya.code ||
-          ""
-        )
-        +
-        " - "
-        +
-        (
-          wilaya.nom_ar ||
-          wilaya.name_ar ||
-          ""
-        )
-        +
-        " | "
-        +
-        (
-          wilaya.nom_fr ||
-          wilaya.name_fr ||
-          ""
-        );
-
-      wilayaSelect.appendChild(option);
-
-    });
+      }
+    );
 
   }catch(error){
 
@@ -1773,7 +2061,11 @@ async function loadCommunes(){
       await fetch(COMMUNES_URL);
 
     if(!response.ok){
-      throw new Error("Communes error");
+
+      throw new Error(
+        "Communes error"
+      );
+
     }
 
     const data =
@@ -1803,63 +2095,74 @@ wilayaSelect.addEventListener(
     communeSelect.innerHTML =
       '<option value="">اختاري البلدية</option>';
 
-    communeSelect.disabled = true;
+    communeSelect.disabled =
+      true;
 
     if(!selectedCode){
       return;
     }
 
     const communes =
-      allCommunes.filter(function(commune){
+      allCommunes.filter(
+        function(commune){
 
-        const communeCode =
-          String(
-            commune.wilaya_code ||
-            commune.wilaya ||
-            commune.wilaya_num ||
+          const communeCode =
+            String(
+              commune.wilaya_code ||
+              commune.wilaya ||
+              commune.wilaya_num ||
+              ""
+            );
+
+          return communeCode ===
+            selectedCode;
+
+        }
+      );
+
+
+    communes.forEach(
+      function(commune){
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
+        option.value =
+          commune.nom_ar ||
+          commune.name_ar ||
+          commune.nom_fr ||
+          commune.name_fr ||
+          "";
+
+        option.textContent =
+          (
+            commune.nom_ar ||
+            commune.name_ar ||
+            ""
+          )
+          +
+          " | "
+          +
+          (
+            commune.nom_fr ||
+            commune.name_fr ||
             ""
           );
 
-        return communeCode === selectedCode;
-
-      });
-
-
-    communes.forEach(function(commune){
-
-      const option =
-        document.createElement("option");
-
-      option.value =
-        commune.nom_ar ||
-        commune.name_ar ||
-        commune.nom_fr ||
-        commune.name_fr ||
-        "";
-
-      option.textContent =
-        (
-          commune.nom_ar ||
-          commune.name_ar ||
-          ""
-        )
-        +
-        " | "
-        +
-        (
-          commune.nom_fr ||
-          commune.name_fr ||
-          ""
+        communeSelect.appendChild(
+          option
         );
 
-      communeSelect.appendChild(option);
-
-    });
+      }
+    );
 
 
     if(communes.length > 0){
 
-      communeSelect.disabled = false;
+      communeSelect.disabled =
+        false;
 
     }
 
@@ -1940,7 +2243,10 @@ orderButton.addEventListener(
     let commune = "";
 
 
-    if(delivery === "توصيل إلى المنزل"){
+    if(
+      delivery ===
+      "توصيل إلى المنزل"
+    ){
 
       if(!wilayaSelect.value){
 
@@ -1976,9 +2282,11 @@ orderButton.addEventListener(
 
     }else{
 
-      wilaya = "استلام من المكتب";
+      wilaya =
+        "استلام من المكتب";
 
-      commune = "استلام من المكتب";
+      commune =
+        "استلام من المكتب";
 
     }
 
@@ -1990,40 +2298,49 @@ orderButton.addEventListener(
     let productsText = "";
 
 
-    cart.forEach(function(item){
+    cart.forEach(
+      function(item){
 
-      const product =
-        products.find(function(p){
-          return p.id === item.id;
-        });
+        const product =
+          products.find(
+            function(p){
+              return p.id === item.id;
+            }
+          );
 
-      if(product){
+        if(product){
 
-        total +=
-          product.price * item.quantity;
+          total +=
+            product.price *
+            item.quantity;
 
-        totalQuantity +=
-          item.quantity;
+          totalQuantity +=
+            item.quantity;
 
-        productsText +=
-          product.name
-          +
-          " × "
-          +
-          item.quantity
-          +
-          " | ";
+          productsText +=
+            product.name
+            +
+            " × "
+            +
+            item.quantity
+            +
+            " | ";
+
+        }
 
       }
-
-    });
+    );
 
 
     productsText =
-      productsText.replace(/\s\|\s$/,"");
+      productsText.replace(
+        /\s\|\s$/,
+        ""
+      );
 
 
-    orderButton.disabled = true;
+    orderButton.disabled =
+      true;
 
     orderButton.textContent =
       "⏳ جارٍ إرسال الطلب...";
@@ -2063,7 +2380,9 @@ orderButton.addEventListener(
           },
 
           body:
-            JSON.stringify(orderData),
+            JSON.stringify(
+              orderData
+            ),
 
           mode:"no-cors"
         }
@@ -2081,16 +2400,23 @@ orderButton.addEventListener(
       updateCart();
 
 
-      document.getElementById("name").value = "";
+      document.getElementById(
+        "name"
+      ).value = "";
 
-      document.getElementById("phone").value = "";
+
+      document.getElementById(
+        "phone"
+      ).value = "";
+
 
       wilayaSelect.value = "";
 
       communeSelect.innerHTML =
         '<option value="">اختاري الولاية أولاً</option>';
 
-      communeSelect.disabled = true;
+      communeSelect.disabled =
+        true;
 
 
     }catch(error){
@@ -2105,7 +2431,8 @@ orderButton.addEventListener(
     }
 
 
-    orderButton.disabled = false;
+    orderButton.disabled =
+      false;
 
     orderButton.textContent =
       "🛍️ تأكيد الطلب";
@@ -2115,10 +2442,13 @@ orderButton.addEventListener(
 
 
 /* =========================================
-   الرسائل
+   رسائل الطلب
 ========================================= */
 
-function showStatus(message,success){
+function showStatus(
+  message,
+  success
+){
 
   statusBox.textContent =
     message;
@@ -2131,12 +2461,16 @@ function showStatus(message,success){
   statusBox.style.display =
     "block";
 
-  setTimeout(function(){
 
-    statusBox.style.display =
-      "none";
+  setTimeout(
+    function(){
 
-  },5000);
+      statusBox.style.display =
+        "none";
+
+    },
+    5000
+  );
 
 }
 
@@ -2154,16 +2488,613 @@ function formatPrice(number){
 
 
 /* =========================================
+   نظام التعليقات
+========================================= */
+
+const reviewProduct =
+document.getElementById(
+  "reviewProduct"
+);
+
+const reviewsList =
+document.getElementById(
+  "reviewsList"
+);
+
+const reviewFormBox =
+document.getElementById(
+  "reviewFormBox"
+);
+
+const reviewName =
+document.getElementById(
+  "reviewName"
+);
+
+const reviewText =
+document.getElementById(
+  "reviewText"
+);
+
+const starsInput =
+document.getElementById(
+  "starsInput"
+);
+
+const ratingText =
+document.getElementById(
+  "ratingText"
+);
+
+const reviewStatus =
+document.getElementById(
+  "reviewStatus"
+);
+
+
+let selectedRating = 0;
+
+
+/* =========================================
+   ملء قائمة المنتجات
+========================================= */
+
+function loadReviewProducts(){
+
+  products.forEach(
+    function(product){
+
+      const option =
+        document.createElement(
+          "option"
+        );
+
+      option.value =
+        product.id;
+
+      option.textContent =
+        product.name;
+
+      reviewProduct.appendChild(
+        option
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   اختيار المنتج
+========================================= */
+
+reviewProduct.addEventListener(
+  "change",
+  function(){
+
+    renderReviews(
+      this.value
+    );
+
+  }
+);
+
+
+/* =========================================
+   اختيار النجوم
+========================================= */
+
+starsInput
+.querySelectorAll("button")
+.forEach(
+  function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        selectedRating =
+          Number(
+            this.dataset.rating
+          );
+
+        updateStars();
+
+      }
+    );
+
+  }
+);
+
+
+function updateStars(){
+
+  starsInput
+  .querySelectorAll("button")
+  .forEach(
+    function(button){
+
+      const rating =
+        Number(
+          button.dataset.rating
+        );
+
+      if(
+        rating <=
+        selectedRating
+      ){
+
+        button.classList.add(
+          "selected"
+        );
+
+      }else{
+
+        button.classList.remove(
+          "selected"
+        );
+
+      }
+
+    }
+  );
+
+
+  const texts = {
+
+    1:"⭐ غير راضية",
+
+    2:"⭐⭐ مقبول",
+
+    3:"⭐⭐⭐ جيد",
+
+    4:"⭐⭐⭐⭐ ممتاز",
+
+    5:"⭐⭐⭐⭐⭐ رائع"
+
+  };
+
+
+  ratingText.textContent =
+    texts[selectedRating] ||
+    "اختاري عدد النجوم";
+
+}
+
+
+/* =========================================
+   فتح نموذج التعليق
+========================================= */
+
+document.getElementById(
+  "openReview"
+)
+.addEventListener(
+  "click",
+  function(){
+
+    reviewFormBox.classList.add(
+      "show"
+    );
+
+    reviewFormBox.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  }
+);
+
+
+/* =========================================
+   إغلاق النموذج
+========================================= */
+
+document.getElementById(
+  "closeReview"
+)
+.addEventListener(
+  "click",
+  function(){
+
+    reviewFormBox.classList.remove(
+      "show"
+    );
+
+  }
+);
+
+
+/* =========================================
+   تخزين التعليقات محليًا
+========================================= */
+
+function getReviews(){
+
+  try{
+
+    return JSON.parse(
+      localStorage.getItem(
+        "imyStoreReviews"
+      )
+    ) || [];
+
+  }catch(error){
+
+    return [];
+
+  }
+
+}
+
+
+function saveReviews(reviews){
+
+  localStorage.setItem(
+    "imyStoreReviews",
+    JSON.stringify(reviews)
+  );
+
+}
+
+
+/* =========================================
+   عرض التعليقات
+========================================= */
+
+function renderReviews(
+  productId
+){
+
+  if(!productId){
+
+    reviewsList.innerHTML = `
+
+      <div class="empty-reviews">
+
+        ⭐
+
+        <br><br>
+
+        اختاري منتجًا لرؤية تقييماته.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  const reviews =
+    getReviews().filter(
+      function(review){
+
+        return review.productId ===
+          productId;
+
+      }
+    );
+
+
+  if(reviews.length === 0){
+
+    reviewsList.innerHTML = `
+
+      <div class="empty-reviews">
+
+        ⭐
+
+        <br><br>
+
+        لا توجد تعليقات لهذا المنتج بعد.
+
+        <br>
+
+        كوني أول من يشارك رأيه!
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  reviewsList.innerHTML = "";
+
+
+  reviews
+  .slice()
+  .reverse()
+  .forEach(
+    function(review){
+
+      const reviewElement =
+        document.createElement(
+          "div"
+        );
+
+      reviewElement.className =
+        "review-card";
+
+
+      let stars = "";
+
+      for(
+        let i = 1;
+        i <= 5;
+        i++
+      ){
+
+        stars +=
+          i <= review.rating
+          ? "★"
+          : "☆";
+
+      }
+
+
+      reviewElement.innerHTML = `
+
+        <div class="review-top">
+
+          <div>
+
+            <strong>
+              ${escapeHTML(review.name)}
+            </strong>
+
+            <div class="review-stars">
+              ${stars}
+            </div>
+
+          </div>
+
+          <span class="review-date">
+            ${review.date}
+          </span>
+
+        </div>
+
+        <p class="review-product-name">
+          ${escapeHTML(review.productName)}
+        </p>
+
+        <p class="review-message">
+          ${escapeHTML(review.text)}
+        </p>
+
+      `;
+
+
+      reviewsList.appendChild(
+        reviewElement
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   إضافة تعليق
+========================================= */
+
+document.getElementById(
+  "submitReview"
+)
+.addEventListener(
+  "click",
+  function(){
+
+    const productId =
+      reviewProduct.value;
+
+    const name =
+      reviewName.value.trim();
+
+    const text =
+      reviewText.value.trim();
+
+
+    if(!productId){
+
+      showReviewStatus(
+        "يرجى اختيار المنتج.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    if(!name){
+
+      showReviewStatus(
+        "يرجى كتابة اسمك.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    if(selectedRating === 0){
+
+      showReviewStatus(
+        "يرجى اختيار عدد النجوم.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    if(!text){
+
+      showReviewStatus(
+        "يرجى كتابة تعليقك.",
+        false
+      );
+
+      return;
+
+    }
+
+
+    const product =
+      products.find(
+        function(p){
+          return p.id === productId;
+        }
+      );
+
+
+    const reviews =
+      getReviews();
+
+
+    reviews.push({
+
+      productId:productId,
+
+      productName:
+        product
+        ? product.name
+        : "",
+
+      name:name,
+
+      rating:selectedRating,
+
+      text:text,
+
+      date:new Date()
+        .toLocaleDateString(
+          "ar-DZ"
+        )
+
+    });
+
+
+    saveReviews(
+      reviews
+    );
+
+
+    reviewName.value = "";
+
+    reviewText.value = "";
+
+    selectedRating = 0;
+
+    updateStars();
+
+
+    renderReviews(
+      productId
+    );
+
+
+    showReviewStatus(
+      "✅ تم نشر تعليقك بنجاح.",
+      true
+    );
+
+  }
+);
+
+
+/* =========================================
+   حماية النص
+========================================= */
+
+function escapeHTML(text){
+
+  return String(text)
+    .replace(
+      /&/g,
+      "&amp;"
+    )
+    .replace(
+      /</g,
+      "&lt;"
+    )
+    .replace(
+      />/g,
+      "&gt;"
+    )
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+    .replace(
+      /'/g,
+      "&#039;"
+    );
+
+}
+
+
+/* =========================================
+   رسائل التعليقات
+========================================= */
+
+function showReviewStatus(
+  message,
+  success
+){
+
+  reviewStatus.textContent =
+    message;
+
+  reviewStatus.className =
+    success
+    ? "review-status success"
+    : "review-status error";
+
+  reviewStatus.style.display =
+    "block";
+
+
+  setTimeout(
+    function(){
+
+      reviewStatus.style.display =
+        "none";
+
+    },
+    4000
+  );
+
+}
+
+
+/* =========================================
    تشغيل المتجر
 ========================================= */
 
-renderProducts("skincare");
+renderProducts(
+  "skincare"
+);
 
 updateCart();
 
 loadWilayas();
 
 loadCommunes();
+
+loadReviewProducts();
+
+renderReviews("");
 
 </script>
 
