@@ -1222,32 +1222,126 @@ footer{
 
     <div class="reviews-heading">
 
-      <span class="reviews-badge">💬 آراء وتجارب</span>
+      <span class="reviews-badge">💬 آراء الزوار</span>
 
-      <h2>ماذا يقول زوارنا؟</h2>
+      <h2>تجارب وآراء زوار Imy Store</h2>
 
       <p>
-        اكتشفي آراء وتجارب الزوار حول منتجات Imy Store.
+        بعض الآراء حول منتجات وتجربة التسوق في Imy Store
       </p>
 
     </div>
 
 
-    <!-- اختيار المنتج -->
+    <!-- التعليقات المعروضة للجميع -->
 
-    <div class="review-product-selector">
+    <div id="reviewsList" class="reviews-list">
 
-      <label for="reviewProduct">
-        اختاري المنتج
-      </label>
+      <div class="review-card">
 
-      <select id="reviewProduct">
+        <div class="review-top">
 
-        <option value="">
-          اختاري المنتج الذي تريدين تقييمه
-        </option>
+          <div>
+            <strong>سارة</strong>
 
-      </select>
+            <div class="review-stars">
+              ★★★★★
+            </div>
+          </div>
+
+        </div>
+
+        <p class="review-message">
+          تجربة جميلة جدًا، المنتج أعجبني من ناحية القوام والترطيب،
+          والتغليف كان أنيقًا.
+        </p>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="review-top">
+
+          <div>
+            <strong>إيمان</strong>
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+          </div>
+
+        </div>
+
+        <p class="review-message">
+          أعجبني كثيرًا، خاصة من ناحية الملمس وسهولة الاستعمال.
+          تجربة جميلة وسأجرب منتجات أخرى من المتجر.
+        </p>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="review-top">
+
+          <div>
+            <strong>مريم</strong>
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+          </div>
+
+        </div>
+
+        <p class="review-message">
+          المنتج جميل جدًا، البشرة أصبحت أكثر نعومة وراحة بعد الاستعمال.
+        </p>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="review-top">
+
+          <div>
+            <strong>Lina</strong>
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+          </div>
+
+        </div>
+
+        <p class="review-message">
+          أحببت المنتج والتغليف كثيرًا، كل شيء مرتب وأنيق.
+        </p>
+
+      </div>
+
+
+      <div class="review-card">
+
+        <div class="review-top">
+
+          <div>
+            <strong>Yasmine</strong>
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+          </div>
+
+        </div>
+
+        <p class="review-message">
+          تجربة رائعة، القوام خفيف والمنتج سهل الاستعمال.
+        </p>
+
+      </div>
 
     </div>
 
@@ -1263,16 +1357,7 @@ footer{
     </button>
 
 
-    <!-- التعليقات -->
-
-    <div id="reviewsList" class="reviews-list">
-
-      <!-- سيتم عرض التعليقات هنا -->
-
-    </div>
-
-
-    <!-- نموذج إضافة تعليق -->
+    <!-- نموذج التعليق -->
 
     <div
       class="review-form-box"
@@ -1281,7 +1366,7 @@ footer{
 
       <div class="review-form-header">
 
-        <h3>✍️ شاركي تجربتك</h3>
+        <h3>✍️ شاركي رأيك</h3>
 
         <button
           type="button"
@@ -1347,7 +1432,7 @@ footer{
 
         <textarea
           id="reviewText"
-          placeholder="اكتبي رأيك عن المنتج..."
+          placeholder="اكتبي رأيك أو تجربتك..."
           maxlength="500"
         ></textarea>
 
